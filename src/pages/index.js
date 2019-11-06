@@ -2,25 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
+import usePosts from '../hooks/usePosts';
+import PostPreview from '../components/PostPreview';
 
 const Title = styled.h1.attrs({
   className: 'f2 fw8 bb bw2',
 })``;
 
 const StyledLink = styled(Link).attrs({
-  className: 'f3 fw8 link dim',
+  className: 'f4 fw8 link dim',
 })``;
-
-const StyledText = styled.p.attrs({
-  className: 'f4 fw5 garamond',
-})``;
-const Index = () => (
-  <Layout>
-    <Title>Hello!</Title>
-    <StyledText>Welcome to my blog, here you can see my entries: </StyledText>
-    <StyledLink to="/about/">About Me →</StyledLink>
-  </Layout>
-);
+const Index = () => {
+  const posts = usePosts();
+  return (
+    <Layout>
+      <Title>My Blog</Title>
+      {posts.map(post => (
+        <PostPreview key={post.slug} post={post} />
+      ))}
+    </Layout>
+  );
+};
 
 export default Index;
 export { Title, StyledLink };

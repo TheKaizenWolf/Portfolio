@@ -7,11 +7,10 @@ import { slide as Menu } from 'react-burger-menu';
 import Header from './Header';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 
-
 import './Layout.css';
 
 const Inner = styled.div.attrs({
-  className: 'ph4',
+  className: 'ph4 tc-m',
 })``;
 
 const MenuLink = styled(Link).attrs({
@@ -19,21 +18,22 @@ const MenuLink = styled(Link).attrs({
 })``;
 
 const Layout = ({ children }) => {
-  const {title, description} = useSiteMetadata();
+  const { title, description } = useSiteMetadata();
   return (
-  <div>
-    <Helmet>
-      <html lang="en" />
-      <title>{title}</title>
-      <meta name="description" content={description} />
-    </Helmet>
-    <Menu>
-      <MenuLink to="/">Home</MenuLink>
-      <MenuLink to="/about/">About</MenuLink>
-    </Menu>
-    <Header />
-    <Inner>{children}</Inner>
-  </div>
-)}
+    <div>
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
+      <Menu>
+        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/about/">About</MenuLink>
+      </Menu>
+      <Header />
+      <Inner>{children}</Inner>
+    </div>
+  );
+};
 
 export default Layout;
