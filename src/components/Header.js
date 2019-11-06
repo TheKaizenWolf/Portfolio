@@ -29,7 +29,7 @@ const Header = () => (
   <StyledHeader>
     <div className="bar pa3 tc-m">
       <Logo className="pl3" to="/">
-        FEM Workshop
+        Raul Saavedra
       </Logo>
       <Nav />
     </div>

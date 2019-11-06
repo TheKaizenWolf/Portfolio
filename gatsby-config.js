@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Frontend Masters',
-    description: 'Site built from Gatsby workshop from Frontend Masters',
+    title: 'Raul Saavedra',
+    description: 'Raul Saavedra',
   },
   plugins: [`gatsby-plugin-styled-components`, `gatsby-plugin-react-helmet`],
 };

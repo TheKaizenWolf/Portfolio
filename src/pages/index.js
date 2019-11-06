@@ -16,7 +16,7 @@ const StyledText = styled.p.attrs({
 })``;
 const Index = () => (
   <Layout>
-    <Title>Hello Frontend Masters!</Title>
+    <Title>Hello!</Title>
     <StyledText>Welcome to my blog, here you can see my entries: </StyledText>
     <StyledLink to="/about/">About Me →</StyledLink>
   </Layout>

@@ -5,7 +5,7 @@ import { Title, StyledLink } from './index';
 
 const about = () => (
   <Layout>
-    <Title>Welcome to the about page!</Title>
+    <Title>About me...!</Title>
 
     <StyledLink to="/">Home →</StyledLink>
   </Layout>
