@@ -1,8 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-
+import styled from 'styled-components';
 import Layout from '../components/Layout';
+
+const StyledP = styled.p.attrs({ className: 'f4' })``;
+
+const components = {
+  p: StyledP,
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -22,7 +29,9 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     <p className="f4">
       Posted by <b>{post.frontmatter.author}</b>
     </p>
-    <MDXRenderer>{post.body}</MDXRenderer>
+    <MDXProvider components={components}>
+      <MDXRenderer>{post.body}</MDXRenderer>
+    </MDXProvider>
   </Layout>
 );
 
