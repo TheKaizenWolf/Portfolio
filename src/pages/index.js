@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import usePosts from '../hooks/usePosts';
 import PostPreview from '../components/PostPreview';
+import Hero from '../components/Hero';
 
 const Title = styled.h1.attrs({
   className: 'f2 fw8 bb bw2',
@@ -16,7 +17,8 @@ const Index = () => {
   const posts = usePosts();
   return (
     <Layout>
-      <Title>My Blog</Title>
+      <Hero />
+      <Title>My Latest Posts</Title>
       {posts.map(post => (
         <PostPreview key={post.slug} post={post} />
       ))}
