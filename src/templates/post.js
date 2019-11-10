@@ -25,6 +25,7 @@ export const query = graphql`
 
 const PostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
+    <div className="ph4-l tc">
     <h1 className="f2 purple underline">{post.frontmatter.title}</h1>
     <p className="f4">
       Posted by <b>{post.frontmatter.author}</b>
@@ -32,6 +33,7 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     <MDXProvider components={components}>
       <MDXRenderer>{post.body}</MDXRenderer>
     </MDXProvider>
+    </div>
   </Layout>
 );
 
