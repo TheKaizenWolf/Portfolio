@@ -18,7 +18,7 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
-      <Title  className="tc-m">My Latest Posts</Title>
+      <Title className="tc-m">My Latest Posts</Title>
       {posts.map(post => (
         <PostPreview key={post.slug} post={post} />
       ))}

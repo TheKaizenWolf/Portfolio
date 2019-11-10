@@ -22,7 +22,7 @@ const Hero = () => {
     }
   `);
 
-  return <ImageBackground Tag="section" fluid={image.sharp.fluid}/>;
+  return <ImageBackground Tag="section" fluid={image.sharp.fluid} />;
 };
 
 export default Hero;
