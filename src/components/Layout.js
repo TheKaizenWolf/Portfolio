@@ -4,8 +4,8 @@ import 'tachyons';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
-import Header from './Header';
-import useSiteMetadata from '../hooks/useSiteMetadata';
+import Header from './header';
+import useSiteMetadata from '../hooks/use-metadata';
 
 import './Layout.css';
 

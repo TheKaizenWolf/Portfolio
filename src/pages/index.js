@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import Layout from '../components/Layout';
-import usePosts from '../hooks/usePosts';
-import PostPreview from '../components/PostPreview';
-import Hero from '../components/Hero';
+import Layout from '../components/layout';
+import usePosts from '../hooks/use-posts';
+import PostPreview from '../components/post-preview';
+import Hero from '../components/hero';
 
 const Title = styled.h1.attrs({
   className: 'f2 fw8 bb bw2',

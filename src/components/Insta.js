@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
-import useInstagram from '../hooks/useInstagram';
+import useInstagram from '../hooks/use-instagram';
 
 const ImageContainer = styled.a.attrs({
   className: 'dib ma3 grow shadow-3',

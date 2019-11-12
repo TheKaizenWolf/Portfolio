@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import Nav from './Nav';
+import Nav from './nav';
 
 const Logo = styled(Link).attrs({
   className: 'f2 fw8 no-underline white',
