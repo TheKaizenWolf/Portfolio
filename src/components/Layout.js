@@ -7,7 +7,7 @@ import { slide as Menu } from 'react-burger-menu';
 import Header from './header';
 import useSiteMetadata from '../hooks/use-metadata';
 
-import './Layout.css';
+import './layout.css';
 
 const Inner = styled.div.attrs({
   className: 'ph6-l ph4-m',
