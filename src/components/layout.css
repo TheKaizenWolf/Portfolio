@@ -39,3 +39,12 @@
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/ProximaNova-Regular.woff")
+}
+
+body {
+  font-family: "Proxima Nova"
+}

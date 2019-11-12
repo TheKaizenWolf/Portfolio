@@ -4,9 +4,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { StyledLink } from '../pages/index';
 
-
 const StyledArticle = styled.article.attrs({
-  className: 'mb3 pb3 pt3 bb bw1 gray',
+  className: 'mb3 pb3 pt3 bb bw1 purple',
 })`
   display: grid;
   grid-template-columns: 1fr 6fr;
@@ -20,11 +19,15 @@ const PostImageContainer = styled(Link).attrs({})`
 const PostPreview = ({ post }) => (
   <StyledArticle>
     <PostImageContainer to={post.slug}>
-      <Image fluid={post.image.sharp.fluid} alt={post.title} />
+      <Image
+        className="shadow-3 dim"
+        fluid={post.image.sharp.fluid}
+        alt={post.title}
+      />
     </PostImageContainer>
     <div>
-      <h3 className="f2 mt0 mb0 purple underline">{post.title}</h3>
-      <p className="f4">{post.excerpt}</p>
+      <h3 className="f2 mt0 mb0 light-purple underline">{post.title}</h3>
+      <p className="f4 black">{post.excerpt}</p>
       <StyledLink to={post.slug}>Read this post →</StyledLink>
     </div>
   </StyledArticle>

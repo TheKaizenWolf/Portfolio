@@ -8,10 +8,12 @@ import Hero from '../components/hero';
 
 const Title = styled.h1.attrs({
   className: 'f2 fw8 bb bw2',
-})``;
+})`
+  color: #5e2ca5;
+`;
 
 const StyledLink = styled(Link).attrs({
-  className: 'f4 fw8 link dim',
+  className: 'f4 fw8 link dim dark-pink',
 })``;
 const Index = () => {
   const posts = usePosts();

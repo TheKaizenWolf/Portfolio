@@ -10,7 +10,7 @@ import useSiteMetadata from '../hooks/use-metadata';
 import './layout.css';
 
 const Inner = styled.div.attrs({
-  className: 'ph6-l ph4-m',
+  className: 'ph6-l ph4',
 })``;
 
 const MenuLink = styled(Link).attrs({

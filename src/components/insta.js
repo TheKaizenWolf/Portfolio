@@ -12,16 +12,19 @@ const Insta = () => {
   const instaPhotos = useInstagram();
   const { username } = instaPhotos[0];
   return (
-    <div className="tc-m">
-      <h2>Instagram posts from @{username}</h2>
-      <div className="tc">
+    <div className="tc mb4">
+      <h2 className="light-purple">Instagram posts from @{username}</h2>
+      <div className="tc mb2">
         {instaPhotos.map(photo => (
           <ImageContainer href={`https://instagram.com/p/${photo.id}/`}>
             <Image fluid={photo.fluid} alt={photo.caption} />
           </ImageContainer>
         ))}
       </div>
-      <a className="f4 fw8 link dim" href="https://instagram.com/thekaizenwolf">
+      <a
+        className="f3 fw8 link dim dark-pink"
+        href="https://instagram.com/thekaizenwolf"
+      >
         See more in instagram
       </a>
     </div>
