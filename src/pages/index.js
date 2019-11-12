@@ -7,7 +7,7 @@ import PostPreview from '../components/post-preview';
 import Hero from '../components/hero';
 
 const Title = styled.h1.attrs({
-  className: 'f2 fw8 bb bw2',
+  className: 'f2 fw8 bb bw2 tc tl-l',
 })`
   color: #5e2ca5;
 `;
