@@ -3,9 +3,13 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const NavLink = styled(Link).attrs({
-  className: 'f3 fw8 tracked white dib pa2 ph4 link dn-m',
+  className: 'f3 fw8 tracked white dib pa2 ph4 link',
   activeClassName: 'underline',
-})``;
+})`
+  @media (max-width: 60em) {
+    display: none;
+  }
+`;
 const Nav = () => (
   <div className="flex justify-end">
     <NavLink to="/">Home</NavLink>

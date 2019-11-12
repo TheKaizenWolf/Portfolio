@@ -15,7 +15,7 @@ const StyledHeader = styled.header.attrs({
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
-    @media (max-width: 59.99em) {
+    @media (max-width: 60em) {
       grid-template-columns: 1fr;
       justify-content: center;
     }
@@ -27,7 +27,7 @@ const StyledHeader = styled.header.attrs({
 `;
 const Header = () => (
   <StyledHeader>
-    <div className="bar pa3 tc-m">
+    <div className="bar pa3 tc">
       <Logo className="pl3" to="/">
         Raul Saavedra
       </Logo>
