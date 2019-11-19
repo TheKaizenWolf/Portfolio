@@ -41,10 +41,10 @@
 }
 
 @font-face {
-  font-family: "Operator Mono";
-  src: url("/fonts/OperatorMono-Book.woff")
+  font-family: "Proxima Nova";
+  src: url("/fonts/ProximaNova-Regular.woff")
 }
 
 body {
-  font-family: "Operator Mono"
+  font-family: "Proxima Nova"
 }
