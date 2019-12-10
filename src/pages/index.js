@@ -16,7 +16,15 @@ const StyledHeroContainer = styled.div.attrs({
 const StyledRow = styled.div.attrs({
   className: 'bg-purple',
 })`
-  height: 30vh;
+  @media (min-width: 60rem) {
+    height: 35vh;
+  }
+`;
+
+const StyledRowHeading = styled.h1.attrs({
+  className: 'f3',
+})`
+  font-family: 'Proxima Nova Black';
 `;
 const StyledHeading = styled.h1.attrs({
   className: 'f1 fw8 w-40',
@@ -60,7 +68,28 @@ const Index = () => {
           <Image fluid={image.sharp.fluid} />
         </HeroImageContainer>
       </StyledHeroContainer>
-      <StyledRow />
+      <StyledRow className="flex flex-row-l flex-column animated fadeIn delay-1s ">
+        <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
+          <StyledRowHeading>Development</StyledRowHeading>
+          <p className="f4 fw4">
+            Your project will have a great attention to detail, front-end and
+            back-end.
+          </p>
+        </div>
+        <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
+          <StyledRowHeading>Communication</StyledRowHeading>
+          <p className="f4 fw4">
+            We will use Trello and Slack in order to create an excellent
+            communication environment.
+          </p>
+        </div>
+        <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
+          <StyledRowHeading>Pricing</StyledRowHeading>
+          <p className="f4 fw4">
+            Need flexible pricing? Hourly or fixed prices are accepted.
+          </p>
+        </div>
+      </StyledRow>
     </Layout>
   );
 };
