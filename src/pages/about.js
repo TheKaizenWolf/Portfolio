@@ -1,9 +1,9 @@
 import React from 'react';
 import Insta from '../components/insta';
 import Layout from '../components/layout';
-import { Title } from './index';
+import { Title } from './blog';
 
-const about = () => (
+const About = () => (
   <Layout>
     <Title className="tc-m">About me...!</Title>
     <p className="f4 tc-m">
@@ -14,4 +14,4 @@ const about = () => (
   </Layout>
 );
 
-export default about;
+export default About;

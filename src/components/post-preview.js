@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { StyledLink } from '../pages/index';
+import { StyledLink } from '../pages/blog';
 
 const StyledArticle = styled.article.attrs({
   className: 'mb3 pb3 pt3 bb bw1 purple',

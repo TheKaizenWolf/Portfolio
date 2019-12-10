@@ -13,7 +13,8 @@ const NavLink = styled(Link).attrs({
 const Nav = () => (
   <div className="flex justify-end">
     <NavLink to="/">Home</NavLink>
-    <NavLink to="/about/" className="mr4">
+    <NavLink to="/blog">Blog</NavLink>
+    <NavLink to="/about" className="mr4">
       About
     </NavLink>
   </div>

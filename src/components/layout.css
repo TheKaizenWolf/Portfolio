@@ -45,6 +45,11 @@
   src: url("/fonts/ProximaNova-Regular.woff")
 }
 
+@font-face {
+  font-family: "Proxima Nova Black";
+  src: url("/fonts/ProximaNova-Black.woff")
+
+}
 body {
   font-family: "Proxima Nova"
 }

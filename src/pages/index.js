@@ -1,32 +1,68 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { GoMarkGithub } from 'react-icons/go';
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import usePosts from '../hooks/use-posts';
-import PostPreview from '../components/post-preview';
-import Hero from '../components/hero';
 
-const Title = styled.h1.attrs({
-  className: 'f2 fw8 bb bw2 tc tl-l',
+const StyledHeroContainer = styled.div.attrs({
+  className: '',
 })`
-  color: #5e2ca5;
+  height: 70vh;
+  overflow: hidden;
+`;
+const StyledRow = styled.div.attrs({
+  className: 'bg-purple',
+})`
+  height: 30vh;
+`;
+const StyledHeading = styled.h1.attrs({
+  className: 'f1 fw8 w-40',
+})`
+  font-family: 'Proxima Nova Black';
 `;
 
-const StyledLink = styled(Link).attrs({
-  className: 'f4 fw8 link dim dark-pink',
-})``;
+const HeroImageContainer = styled(Link).attrs({})`
+  width: 500px;
+  margin: 0 auto;
+  left: 650px;
+
+  @media (max-width: 60rem) {
+    display: none;
+  }
+`;
+
 const Index = () => {
-  const posts = usePosts();
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "indexhero.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
   return (
     <Layout>
-      <Hero />
-      <Title className="tc-m">My Latest Posts</Title>
-      {posts.map(post => (
-        <PostPreview key={post.slug} post={post} />
-      ))}
+      <StyledHeroContainer className="relative flex flex-column justify-center tc">
+        <StyledHeading className="w-40-l animated bounceInLeft w-100 ph2">
+          I Am A Full-Stack Developer
+        </StyledHeading>
+        <div className="flex w-40-l justify-center animated bounceInLeft ">
+          <FaLinkedinIn className="f2 pr3" />
+          <GoMarkGithub className="f2" />
+        </div>
+        <HeroImageContainer className="absolute animated bounceInRight ">
+          <Image fluid={image.sharp.fluid} />
+        </HeroImageContainer>
+      </StyledHeroContainer>
+      <StyledRow />
     </Layout>
   );
 };
 
 export default Index;
-export { Title, StyledLink };
