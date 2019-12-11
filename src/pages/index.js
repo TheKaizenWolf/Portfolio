@@ -99,14 +99,14 @@ const Index = () => {
           My Projects
         </StyledHeading>
         <div>
-          <StyledHeading className="dark-pink">
-            Face-Recognition-App
-          </StyledHeading>
+          <StyledHeading className="dark-pink">Rafits</StyledHeading>
           <ProjectImage src="img/rafits.png" />
         </div>
         <div>
           <div>
-            <StyledHeading className="dark-pink">Rafits</StyledHeading>
+            <StyledHeading className="dark-pink">
+              Face-Recognition-App
+            </StyledHeading>
             <ProjectImage src="img/face.png" />
           </div>
           <StyledHeading className="dark-pink">Roboamigos</StyledHeading>
