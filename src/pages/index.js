@@ -22,12 +22,12 @@ const StyledRow = styled.div.attrs({
 `;
 
 const StyledRowHeading = styled.h1.attrs({
-  className: 'f3',
+  className: 'f3 purple',
 })`
   font-family: 'Proxima Nova Black';
 `;
 const StyledHeading = styled.h1.attrs({
-  className: 'f1 fw8 w-40',
+  className: 'f1 fw8',
 })`
   font-family: 'Proxima Nova Black';
 `;
@@ -42,6 +42,11 @@ const HeroImageContainer = styled(Link).attrs({})`
   }
 `;
 
+const ProjectImage = styled.img.attrs({
+  className: 'shadow-3 grow',
+})`
+  width: 35rem;
+`;
 const Index = () => {
   const { image } = useStaticQuery(graphql`
     query {
@@ -71,25 +76,43 @@ const Index = () => {
       <StyledRow className="flex flex-row-l flex-column animated fadeIn delay-1s ">
         <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
           <StyledRowHeading>Development</StyledRowHeading>
-          <p className="f4 fw4">
+          <p className="f4 fw5">
             Your project will have a great attention to detail, front-end and
             back-end.
           </p>
         </div>
         <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
           <StyledRowHeading>Communication</StyledRowHeading>
-          <p className="f4 fw4">
-            We will use Trello and Slack in order to create an excellent
-            communication environment.
+          <p className="f4 fw5">
+            We will use Trello and Slack in order to communicate effectively.
           </p>
         </div>
         <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
           <StyledRowHeading>Pricing</StyledRowHeading>
-          <p className="f4 fw4">
+          <p className="f4 fw5">
             Need flexible pricing? Hourly or fixed prices are accepted.
           </p>
         </div>
       </StyledRow>
+      <div className="tc pt2">
+        <StyledHeading className="tc pv3 white bg-purple mh7-l">
+          My Projects
+        </StyledHeading>
+        <div>
+          <StyledHeading className="dark-pink">
+            Face-Recognition-App
+          </StyledHeading>
+          <ProjectImage src="img/rafits.png" />
+        </div>
+        <div>
+          <div>
+            <StyledHeading className="dark-pink">Rafits</StyledHeading>
+            <ProjectImage src="img/face.png" />
+          </div>
+          <StyledHeading className="dark-pink">Roboamigos</StyledHeading>
+          <ProjectImage src="img/robo.png" />
+        </div>
+      </div>
     </Layout>
   );
 };
