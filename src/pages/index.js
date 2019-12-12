@@ -7,19 +7,21 @@ import Image from 'gatsby-image';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 
-const StyledHeroContainer = styled.div.attrs({
+const StyledRowContainer = styled.div.attrs({
+  className: 'bg-white ma3 mb3 tc ph2 ba b--black bw2',
+})``;
+const StyledRowP = styled.p.attrs({
   className: '',
+})``;
+const StyledHeroContainer = styled.div.attrs({
+  className: 'relative flex flex-row justify-center items-center tc',
 })`
   height: 70vh;
   overflow: hidden;
 `;
 const StyledRow = styled.div.attrs({
-  className: 'bg-purple',
-})`
-  @media (min-width: 60rem) {
-    height: 35vh;
-  }
-`;
+  className: 'bg-purple ph2',
+})``;
 
 const StyledRowHeading = styled.h1.attrs({
   className: 'f3 purple',
@@ -32,10 +34,9 @@ const StyledHeading = styled.h1.attrs({
   font-family: 'Proxima Nova Black';
 `;
 
-const HeroImageContainer = styled(Link).attrs({})`
+const HeroImageContainer = styled.div.attrs({})`
   width: 500px;
   margin: 0 auto;
-  left: 650px;
 
   @media (max-width: 60rem) {
     display: none;
@@ -61,60 +62,68 @@ const Index = () => {
   `);
   return (
     <Layout>
-      <StyledHeroContainer className="relative flex flex-column justify-center tc">
-        <StyledHeading className="w-40-l animated bounceInLeft w-100 ph2">
-          I Am A Full-Stack Developer
-        </StyledHeading>
-        <div className="flex w-40-l justify-center animated bounceInLeft ">
-          <FaLinkedinIn className="f2 pr3" />
-          <GoMarkGithub className="f2" />
+      <StyledHeroContainer>
+        <div className="flex flex-column animated bounceInLeft">
+          <div className="flex justify-center">
+            <StyledHeading className="w-100 ph2">
+              I Am A Full-Stack Developer
+            </StyledHeading>
+          </div>
+          <div className="flex justify-center">
+            <FaLinkedinIn className="f2 pr3" />
+            <GoMarkGithub className="f2" />
+          </div>
         </div>
-        <HeroImageContainer className="absolute animated bounceInRight ">
+        <HeroImageContainer className="animated bounceInRight ">
           <Image fluid={image.sharp.fluid} />
         </HeroImageContainer>
       </StyledHeroContainer>
-      <StyledRow className="flex flex-row-l flex-column animated fadeIn delay-1s ">
-        <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
+      <StyledRow className="flex flex-row-l flex-column justify-center animated fadeIn delay-1s ">
+        <StyledRowContainer>
           <StyledRowHeading>Development</StyledRowHeading>
-          <p className="f4 fw5">
+          <StyledRowP className="f4 fw5">
             Your project will have a great attention to detail, front-end and
             back-end.
-          </p>
-        </div>
-        <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
+          </StyledRowP>
+        </StyledRowContainer>
+        <StyledRowContainer>
           <StyledRowHeading>Communication</StyledRowHeading>
-          <p className="f4 fw5">
+          <StyledRowP className="f4 fw5">
             We will use Trello and Slack in order to communicate effectively.
-          </p>
-        </div>
-        <div className="w-33-l bg-white ma4 pa4 tc pt2 ba b--black bw2">
+          </StyledRowP>
+        </StyledRowContainer>
+        <StyledRowContainer>
           <StyledRowHeading>Pricing</StyledRowHeading>
-          <p className="f4 fw5">
+          <StyledRowP className="f4 fw5">
             Need flexible pricing? Hourly or fixed prices are accepted.
-          </p>
-        </div>
+          </StyledRowP>
+        </StyledRowContainer>
       </StyledRow>
       <div className="tc pt2">
-        <StyledHeading className="tc pv3 white bg-purple mh7-l">
+        <StyledHeading className="tc pv3 white bg-purple mh6-l">
           My Projects
         </StyledHeading>
-        <div>
-          <StyledHeading className="dark-pink">Rafits</StyledHeading>
-          <ProjectImage src="img/rafits.png" />
-        </div>
-        <div>
+        <div className="flex flex-column justify-center">
+          <div>
+            <StyledHeading className="dark-pink">Rafits</StyledHeading>
+            <ProjectImage src="img/rafits.png" />
+    
+          </div>
           <div>
             <StyledHeading className="dark-pink">
               Face-Recognition-App
             </StyledHeading>
             <ProjectImage src="img/face.png" />
           </div>
+          <div>
           <StyledHeading className="dark-pink">Roboamigos</StyledHeading>
           <ProjectImage src="img/robo.png" />
+          </div>
         </div>
       </div>
     </Layout>
   );
 };
+
 
 export default Index;
