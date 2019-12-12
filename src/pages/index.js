@@ -44,10 +44,35 @@ const HeroImageContainer = styled.div.attrs({})`
 `;
 
 const ProjectImage = styled.img.attrs({
-  className: 'shadow-3 grow',
+  className: 'shadow-3 grow bb bt bw5 b--pink',
 })`
-  width: 35rem;
+  width: 31.5rem;
 `;
+
+const ProjectPDiv = styled.div.attrs({
+  className: 'pt2 pb2',
+})``;
+
+const ProjectContainer = styled.div.attrs({
+  className: '',
+})`
+  div {
+    margin: 0 auto;
+    width: 600px;
+  }
+  @media (max-width: 45rem) {
+    div {
+      width: 400px;
+    }
+  }
+`;
+
+const ProjectP = styled.div.attrs({
+  className: '',
+})`
+  font-family: 'Proxima Nova Black';
+`;
+
 const Index = () => {
   const { image } = useStaticQuery(graphql`
     query {
@@ -103,27 +128,43 @@ const Index = () => {
         <StyledHeading className="tc pv3 white bg-purple mh6-l">
           My Projects
         </StyledHeading>
-        <div className="flex flex-column justify-center">
-          <div>
-            <StyledHeading className="dark-pink">Rafits</StyledHeading>
+        <ProjectContainer className="">
+          <div className="bg-purple">
+            <StyledHeading className="white pt3">Rafits</StyledHeading>
             <ProjectImage src="img/rafits.png" />
-    
+            <ProjectPDiv>
+              <ProjectP className="f4 white ph3 pb3">
+                This project is a e-commerce store implementing a full CRUD API.
+                It uses React, Apollo, GraphQL and Prisma.
+              </ProjectP>
+            </ProjectPDiv>
           </div>
-          <div>
-            <StyledHeading className="dark-pink">
+          <div className="bg-purple">
+            <StyledHeading className="white pt3">
               Face-Recognition-App
             </StyledHeading>
             <ProjectImage src="img/face.png" />
+            <ProjectPDiv>
+              <ProjectP className="f4 white ph3 pb3">
+                This project is a face-recognition-app that utilizes the
+                Clarifai API. It uses React, Node.js, and Express.
+              </ProjectP>
+            </ProjectPDiv>
           </div>
-          <div>
-          <StyledHeading className="dark-pink">Roboamigos</StyledHeading>
-          <ProjectImage src="img/robo.png" />
+          <div className="bg-purple">
+            <StyledHeading className="white pt3">Roboamigos</StyledHeading>
+            <ProjectImage src="img/robo.png" />
+            <ProjectPDiv>
+              <ProjectP className="f4 white ph3 pb3">
+                This project is a React App that utilizes robohash for the
+                robots, and fake JSON for their data.
+              </ProjectP>
+            </ProjectPDiv>
           </div>
-        </div>
+        </ProjectContainer>
       </div>
     </Layout>
   );
 };
-
 
 export default Index;
