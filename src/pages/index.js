@@ -71,7 +71,7 @@ const ProjectContainer = styled.div.attrs({
   }
   @media (max-width: 35rem) {
     div {
-      width: 350px;
+      width: 325px;
     }
   }
 `;
