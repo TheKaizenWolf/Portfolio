@@ -7,18 +7,24 @@ import Image from 'gatsby-image';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 
-const StyledRowContainer = styled.div.attrs({
-  className: 'bg-white ma3 mb3 tc ph2 ba b--black bw2',
-})``;
-const StyledRowP = styled.p.attrs({
-  className: '',
-})``;
+
 const StyledHeroContainer = styled.div.attrs({
   className: 'relative flex flex-row justify-center items-center tc',
 })`
   height: 70vh;
   overflow: hidden;
 `;
+
+const HeroImageContainer = styled.div.attrs({})`
+  width: 500px;
+  margin: 0 auto;
+
+  @media (max-width: 60rem) {
+    display: none;
+  }
+`;
+
+
 const StyledRow = styled.div.attrs({
   className: 'bg-purple ph2',
 })``;
@@ -33,15 +39,13 @@ const StyledHeading = styled.h1.attrs({
 })`
   font-family: 'Proxima Nova Black';
 `;
+const StyledRowContainer = styled.div.attrs({
+  className: 'bg-white ma3 mb3 tc ph2 ba b--black bw2 grow',
+})``;
+const StyledRowP = styled.p.attrs({
+  className: '',
+})``;
 
-const HeroImageContainer = styled.div.attrs({})`
-  width: 500px;
-  margin: 0 auto;
-
-  @media (max-width: 60rem) {
-    display: none;
-  }
-`;
 
 const ProjectImage = styled.img.attrs({
   className: 'shadow-3 grow bb bt bw5 b--pink',
