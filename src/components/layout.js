@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Menu>
         <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/blog/">Blog</MenuLink>
         <MenuLink to="/about/">About</MenuLink>
       </Menu>
       <Header />
