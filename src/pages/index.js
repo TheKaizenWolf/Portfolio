@@ -7,7 +7,6 @@ import Image from 'gatsby-image';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 
-
 const StyledHeroContainer = styled.div.attrs({
   className: 'relative flex flex-row justify-center items-center tc',
 })`
@@ -23,7 +22,6 @@ const HeroImageContainer = styled.div.attrs({})`
     display: none;
   }
 `;
-
 
 const StyledRow = styled.div.attrs({
   className: 'bg-purple ph2',
@@ -46,7 +44,20 @@ const StyledRowP = styled.p.attrs({
   className: '',
 })``;
 
-
+const TechnologiesContainer = styled.div.attrs({
+  className: '',
+})`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+  @media (max-width: 60rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`;
+const TechnologyContainer = styled.div.attrs({
+  className: 'grow',
+})``;
 const ProjectImage = styled.img.attrs({
   className: 'shadow-3 grow bb bt bw5 b--pink',
 })`
@@ -133,6 +144,53 @@ const Index = () => {
           </StyledRowP>
         </StyledRowContainer>
       </StyledRow>
+      <div className="tc pt2">
+        <StyledHeading className="tc pv3 white bg-purple mh6-l">
+          Technologies
+        </StyledHeading>
+        <TechnologiesContainer>
+          <TechnologyContainer>
+            <img src="img/html.png" />
+            <StyledHeading className="f3">HTML</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/javascript.png" />
+            <StyledHeading className="f3">Javascript</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/css.png" />
+            <StyledHeading className="f3">CSS</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/react.png" />
+            <StyledHeading className="f3">React</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/typescript.png" />
+            <StyledHeading className="f3">Typescript</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/apollo.png" />
+            <StyledHeading className="f3">Apollo</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/redux.png" />
+            <StyledHeading className="f3">Redux</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/nodejs.png" />
+            <StyledHeading className="f3">Node.js</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/graphql.png" />
+            <StyledHeading className="f3">GraphQL</StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/docker.png" />
+            <StyledHeading className="f3">Docker</StyledHeading>
+          </TechnologyContainer>
+        </TechnologiesContainer>
+      </div>
       <div className="tc pt2">
         <StyledHeading className="tc pv3 white bg-purple mh6-l">
           My Projects
