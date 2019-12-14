@@ -45,13 +45,16 @@ const StyledRowP = styled.p.attrs({
 })``;
 
 const TechnologiesContainer = styled.div.attrs({
-  className: 'pa2 pa0-l',
+  className: '',
 })`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
   justify-content: center;
-  @media (max-width: 60rem) {
+  @media (max-width: 45rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 65rem) and (min-width: 45rem) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
