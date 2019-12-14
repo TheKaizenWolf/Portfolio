@@ -64,7 +64,7 @@ const TechnologyContainer = styled.div.attrs({
 })``;
 
 const ProjectImage = styled.img.attrs({
-  className: 'grow bb bt bw5 b--pink',
+  className: 'grow bb bt bw5 b--light-purple',
 })`
   width: 31.5rem;
 `;
