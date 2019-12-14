@@ -58,9 +58,11 @@ const TechnologiesContainer = styled.div.attrs({
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
+
 const TechnologyContainer = styled.div.attrs({
   className: 'grow',
 })``;
+
 const ProjectImage = styled.img.attrs({
   className: 'shadow-3 grow bb bt bw5 b--pink',
 })`
