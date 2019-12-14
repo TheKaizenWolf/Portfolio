@@ -207,32 +207,36 @@ const Index = () => {
         </StyledHeading>
         <ProjectContainer className="">
           <div className="bg-purple">
-            <StyledHeading className="white pt3">Rafits</StyledHeading>
+            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              Raulfits
+            </StyledHeading>
             <ProjectImage src="img/rafits.png" />
             <ProjectPDiv>
-              <ProjectP className="f4 white ph3 pb3">
+              <ProjectP className="f4 white ph3 pb3 lh-copy">
                 This project is a e-commerce store implementing a full CRUD API.
                 It uses React, Apollo, GraphQL and Prisma.
               </ProjectP>
             </ProjectPDiv>
           </div>
           <div className="bg-purple">
-            <StyledHeading className="white pt3">
-              Face-Recognition-App
+            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              Face-App
             </StyledHeading>
             <ProjectImage src="img/face.png" />
             <ProjectPDiv>
-              <ProjectP className="f4 white ph3 pb3">
+              <ProjectP className="f4 white ph3 pb3 lh-copy">
                 This project is a face-recognition-app that utilizes the
                 Clarifai API. It uses React, Node.js, and Express.
               </ProjectP>
             </ProjectPDiv>
           </div>
           <div className="bg-purple">
-            <StyledHeading className="white pt3">Roboamigos</StyledHeading>
+            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              Roboamigos
+            </StyledHeading>
             <ProjectImage src="img/robo.png" />
             <ProjectPDiv>
-              <ProjectP className="f4 white ph3 pb3">
+              <ProjectP className="f4 white ph3 pb3 lh-copy">
                 This project is a React App that utilizes robohash for the
                 robots, and fake JSON for their data.
               </ProjectP>
