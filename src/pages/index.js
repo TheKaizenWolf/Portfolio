@@ -45,7 +45,7 @@ const StyledRowP = styled.p.attrs({
 })``;
 
 const TechnologiesContainer = styled.div.attrs({
-  className: '',
+  className: 'pa2 pa0-l',
 })`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
