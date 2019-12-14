@@ -64,7 +64,7 @@ const TechnologyContainer = styled.div.attrs({
 })``;
 
 const ProjectImage = styled.img.attrs({
-  className: 'shadow-3 grow bb bt bw5 b--pink',
+  className: 'grow bb bt bw5 b--pink',
 })`
   width: 31.5rem;
 `;
@@ -80,7 +80,7 @@ const ProjectContainer = styled.div.attrs({
     margin: 0 auto;
     width: 600px;
   }
-  @media (max-width: 45rem) {
+  @media (max-width: 45rem) and (min-width: 35rem) {
     div {
       width: 450px;
     }
@@ -88,6 +88,11 @@ const ProjectContainer = styled.div.attrs({
   @media (max-width: 35rem) {
     div {
       width: 325px;
+    }
+    @media (max-width: 27.5rem) {
+      div {
+        width: 275px;
+      }
     }
   }
 `;
