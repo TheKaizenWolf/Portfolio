@@ -1,4 +1,5 @@
 import React from 'react';
+import Insta from '../components/insta';
 import Layout from '../components/layout';
 import { Title } from './blog';
 
@@ -11,6 +12,7 @@ const About = () => (
       follow the Kaizen philosophy, which translates to continuous improvement
       everyday.
     </p>
+    <Insta />
   </Layout>
 );
 
