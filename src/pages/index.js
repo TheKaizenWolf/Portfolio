@@ -125,12 +125,12 @@ const Index = () => {
             </StyledHeading>
           </div>
           <div className="flex justify-center">
-            <FaLinkedinIn className="f2 pr3">
-              <a href="https://www.linkedin.com/in/raul-s-3138a6153/" />
-            </FaLinkedinIn>
-            <GoMarkGithub className="f2">
-              <a href="https://github.com/TheKaizenWolf" />
-            </GoMarkGithub>
+            <a href="https://www.linkedin.com/in/raul-s-3138a6153/">
+              <FaLinkedinIn className="f2 pr3" />
+            </a>
+            <a href="https://github.com/TheKaizenWolf">
+              <GoMarkGithub className="f2" />
+            </a>
           </div>
         </div>
         <HeroImageContainer className="animated bounceInRight ">
