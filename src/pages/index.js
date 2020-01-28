@@ -129,10 +129,10 @@ const Index = () => {
               className="black"
               href="https://www.linkedin.com/in/raul-s-3138a6153/"
             >
-              <FaLinkedinIn className="f2 pr3" />
+              <FaLinkedinIn className="f1 bb bw3 hover-purple grow pb2 mr4-l mr4" />
             </a>
             <a className="black" href="https://github.com/TheKaizenWolf">
-              <GoMarkGithub className="f2" />
+              <GoMarkGithub className="f1 bb bw3 hover-purple grow pb2" />
             </a>
           </div>
         </div>
