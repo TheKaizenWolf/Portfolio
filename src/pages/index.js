@@ -15,7 +15,7 @@ import Layout from '../components/layout';
 const StyledHeroContainer = styled.div.attrs({
   className: 'relative flex flex-row justify-center items-center tc',
 })`
-  height: 70vh;
+  height: 67vh;
   overflow: hidden;
 `;
 
@@ -138,10 +138,10 @@ const Index = () => {
               className="black"
               href="https://www.linkedin.com/in/raul-s-3138a6153/"
             >
-              <FaLinkedinIn className="f1 bb bw3 hover-purple grow pb2 mr4-l mr4" />
+              <FaLinkedinIn className="f1 bb bw3 b--purple hover-purple grow pb2 mr4-l mr4" />
             </a>
             <a className="black" href="https://github.com/TheKaizenWolf">
-              <GoMarkGithub className="f1 bb bw3 hover-purple grow pb2" />
+              <GoMarkGithub className="f1 bb bw3 b--purple hover-purple grow pb2" />
             </a>
           </div>
         </div>
