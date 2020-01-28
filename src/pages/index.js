@@ -125,10 +125,13 @@ const Index = () => {
             </StyledHeading>
           </div>
           <div className="flex justify-center">
-            <a href="https://www.linkedin.com/in/raul-s-3138a6153/">
+            <a
+              className="black"
+              href="https://www.linkedin.com/in/raul-s-3138a6153/"
+            >
               <FaLinkedinIn className="f2 pr3" />
             </a>
-            <a href="https://github.com/TheKaizenWolf">
+            <a className="black" href="https://github.com/TheKaizenWolf">
               <GoMarkGithub className="f2" />
             </a>
           </div>
