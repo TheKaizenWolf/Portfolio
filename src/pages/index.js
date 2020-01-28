@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedinIn } from 'react-icons/fa';
+import {
+  FaLinkedinIn,
+  FaCommentDots,
+  FaDesktop,
+  FaMoneyBill,
+} from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
@@ -142,20 +147,26 @@ const Index = () => {
       </StyledHeroContainer>
       <StyledRow className="flex flex-row-l flex-column justify-center animated fadeIn delay-1s ">
         <StyledRowContainer>
-          <StyledRowHeading>Development</StyledRowHeading>
+          <StyledRowHeading>
+            Development <FaDesktop className="pl3" />
+          </StyledRowHeading>
           <StyledRowP className="f4 fw5">
             Your project will have a great attention to detail, front-end and
             back-end.
           </StyledRowP>
         </StyledRowContainer>
         <StyledRowContainer>
-          <StyledRowHeading>Communication</StyledRowHeading>
+          <StyledRowHeading>
+            Communication <FaCommentDots className="pl3" />
+          </StyledRowHeading>
           <StyledRowP className="f4 fw5">
             We will use Trello and Slack in order to communicate effectively.
           </StyledRowP>
         </StyledRowContainer>
         <StyledRowContainer>
-          <StyledRowHeading>Pricing</StyledRowHeading>
+          <StyledRowHeading>
+            Pricing <FaMoneyBill className="pl3" />
+          </StyledRowHeading>
           <StyledRowP className="f4 fw5">
             Need flexible pricing? Hourly or fixed prices are accepted.
           </StyledRowP>
