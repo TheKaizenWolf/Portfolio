@@ -29,13 +29,14 @@ const HeroImageContainer = styled.div.attrs({})`
 `;
 
 const StyledRow = styled.div.attrs({
-  className: 'bg-purple ph2',
+  className: 'bg-purple ph2 bb bw3 b--light-purple',
 })``;
 
 const StyledRowHeading = styled.h1.attrs({
-  className: 'f3 purple',
+  className: 'mb0 purple',
 })`
   font-family: 'Proxima Nova Black';
+  font-size: 2rem;
 `;
 const StyledHeading = styled.h1.attrs({
   className: 'f1 fw8',
@@ -148,7 +149,7 @@ const Index = () => {
       <StyledRow className="flex flex-row-l flex-column justify-center animated fadeIn delay-1s ">
         <StyledRowContainer>
           <StyledRowHeading>
-            Development <FaDesktop className="pl3" />
+            Development <FaDesktop className="pl3 purple v-mid" />
           </StyledRowHeading>
           <StyledRowP className="f4 fw5">
             Your project will have a great attention to detail, front-end and
@@ -157,7 +158,7 @@ const Index = () => {
         </StyledRowContainer>
         <StyledRowContainer>
           <StyledRowHeading>
-            Communication <FaCommentDots className="pl3" />
+            Communication <FaCommentDots className="pl3 purple v-mid" />
           </StyledRowHeading>
           <StyledRowP className="f4 fw5">
             We will use Trello and Slack in order to communicate effectively.
@@ -165,7 +166,7 @@ const Index = () => {
         </StyledRowContainer>
         <StyledRowContainer>
           <StyledRowHeading>
-            Pricing <FaMoneyBill className="pl3" />
+            Pricing <FaMoneyBill className="pl3 purple v-mid" />
           </StyledRowHeading>
           <StyledRowP className="f4 fw5">
             Need flexible pricing? Hourly or fixed prices are accepted.
