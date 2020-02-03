@@ -4,7 +4,7 @@ import 'tachyons';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
-import Header from './header';
+import Header from './header-es';
 import useSiteMetadata from '../hooks/use-metadata';
 
 import './layout.css';
@@ -31,9 +31,9 @@ const Layout = ({ children }) => {
         />
       </Helmet>
       <Menu>
-        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/">Inicio</MenuLink>
         <MenuLink to="/blog/">Blog</MenuLink>
-        <MenuLink to="/about/">About</MenuLink>
+        <MenuLink to="/about/">Sobre Mí</MenuLink>
       </Menu>
       <Header />
       <Inner>{children}</Inner>
