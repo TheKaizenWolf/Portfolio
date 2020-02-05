@@ -3,30 +3,24 @@ import { graphql, useStaticQuery } from 'gatsby';
 const usePosts = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
-        nodes {
-          frontmatter {
-            title
-            slug
-            author
-            image {
-              sharp: childImageSharp {
-                fluid(maxWidth: 150, maxHeight: 150) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
+      gcms {
+        posts {
+          title
+          slug
+          author
+          image {
+            url
           }
           excerpt
         }
       }
     }
   `);
-  return data.allMdx.nodes.map(post => ({
-    title: post.frontmatter.title,
-    author: post.frontmatter.author,
-    slug: post.frontmatter.slug,
-    image: post.frontmatter.image,
+  return data.gcms.posts.map(post => ({
+    title: post.title,
+    author: post.author,
+    slug: post.slug,
+    image: post.image.url,
     excerpt: post.excerpt,
   }));
 };

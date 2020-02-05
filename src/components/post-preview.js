@@ -19,11 +19,7 @@ const PostImageContainer = styled(Link).attrs({})`
 const PostPreview = ({ post }) => (
   <StyledArticle>
     <PostImageContainer to={post.slug}>
-      <Image
-        className="shadow-3 dim"
-        fluid={post.image.sharp.fluid}
-        alt={post.title}
-      />
+      <img className="shadow-3 dim" src={post.image} alt={post.title} />
     </PostImageContainer>
     <div>
       <h3 className="f2 mt0 mb0 light-purple underline">{post.title}</h3>

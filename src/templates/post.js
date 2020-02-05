@@ -1,7 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXProvider } from '@mdx-js/react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 
@@ -10,29 +8,36 @@ const StyledP = styled.p.attrs({ className: 'f4' })``;
 const components = {
   p: StyledP,
 };
-
+const StyledImg = styled.img.attrs({
+  className: '',
+})`
+  max-width: 500px;
+`;
 export const query = graphql`
   query($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
+    gcms {
+      post(where: { slug: $slug }) {
         title
+        image {
+          url
+        }
         author
+        content
+        slug
       }
-      body
     }
   }
 `;
 
-const PostTemplate = ({ data: { mdx: post } }) => (
+const PostTemplate = ({ data }) => (
   <Layout>
     <div className="ph4-l tc">
-      <h1 className="f2 purple underline">{post.frontmatter.title}</h1>
+      <h1 className="f2 purple underline">{data.gcms.post.title}</h1>
+      <StyledImg src={data.gcms.post.image.url} alt={data.gcms.post.slug} />
       <p className="f4">
-        Posted by <b>{post.frontmatter.author}</b>
+        Posted by <b>{data.gcms.post.author}</b>
       </p>
-      <MDXProvider components={components}>
-        <MDXRenderer>{post.body}</MDXRenderer>
-      </MDXProvider>
+      <p>{data.gcms.post.content}</p>
     </div>
   </Layout>
 );
