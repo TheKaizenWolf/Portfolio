@@ -43,13 +43,13 @@ const HeroImageContainer = styled.div.attrs({
 `;
 
 const StyledFaDesktop = styled(FaDesktop).attrs({
-  className: 'pl3 light-purple v-mid dib f2 tc pt2',
+  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
 })``;
 const StyledFaCommentDots = styled(FaCommentDots).attrs({
-  className: 'pl3 light-purple v-mid dib f2 tc pt2',
+  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
 })``;
 const StyledFaMoneyBill = styled(FaMoneyBill).attrs({
-  className: 'pl3 light-purple v-mid dib f2 tc pt2',
+  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
 })``;
 const StyledRow = styled.div.attrs({
   className:
@@ -76,7 +76,7 @@ const StyledRowHeading = styled.h1.attrs({
 `;
 
 const StyledRowP = styled.p.attrs({
-  className: 'f4 fw5',
+  className: 'f4 fw6 black-70',
 })``;
 
 const TechnologiesContainer = styled.div.attrs({

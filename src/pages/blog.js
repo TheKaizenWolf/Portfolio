@@ -7,9 +7,9 @@ import PostPreview from '../components/post-preview';
 import Hero from '../components/hero';
 
 const Title = styled.h1.attrs({
-  className: 'f2 fw8 bb bw2 tc tl-l',
+  className: 'f2 fw8 bb bw2 tc tl-l bg-purple br-pill pa2 pl3 white',
 })`
-  color: #5e2ca5;
+  font-family: 'Proxima Nova Black';
 `;
 
 const StyledLink = styled(Link).attrs({

@@ -15,14 +15,18 @@ const PostImageContainer = styled(Link).attrs({})`
   width: 150px;
   margin: 0rem 2rem 0 0;
 `;
-
+const PostTitle = styled.h3.attrs({
+  className: 'f2 mt0 mb0 light-purple underline',
+})`
+  font-family: 'Proxima Nova Black';
+`;
 const PostPreview = ({ post }) => (
   <StyledArticle>
     <PostImageContainer to={post.slug}>
       <img className="shadow-3 dim" src={post.image} alt={post.title} />
     </PostImageContainer>
     <div>
-      <h3 className="f2 mt0 mb0 light-purple underline">{post.title}</h3>
+      <PostTitle>{post.title}</PostTitle>
       <p className="f4 black">{post.excerpt}</p>
       <StyledLink to={post.slug}>Read this post →</StyledLink>
     </div>
