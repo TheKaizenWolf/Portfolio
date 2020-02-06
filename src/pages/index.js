@@ -21,7 +21,8 @@ const StyledHeading = styled.h1.attrs({
   font-family: 'Proxima Nova Black';
 `;
 const StyledSectionHeading = styled.h1.attrs({
-  className: 'f1 fw8 tc pv3 white bg-purple mh6-l br-pill ',
+  className:
+    'f1 fw8 tc pv3 white bg-purple mh6-l br-pill bb b--light-purple bw3 ',
 })`
   font-family: 'Proxima Nova Black';
 `;
@@ -44,7 +45,6 @@ const HeroImageContainer = styled.div.attrs({
     display: none;
   }
 `;
-
 const StyledFaDesktop = styled(FaDesktop).attrs({
   className: 'pl3 dark-pink v-mid dib f2 tc pt2',
 })``;
@@ -88,8 +88,10 @@ const StyledRowHeading = styled.h1.attrs({
 `;
 
 const StyledRowP = styled.p.attrs({
-  className: 'f4 fw6 ph3 black-50',
-})``;
+  className: 'f4 ph3 black-40',
+})`
+  font-family: 'Proxima Nova Black';
+`;
 
 const TechnologiesContainer = styled.div.attrs({
   className: '',
@@ -116,10 +118,6 @@ const ProjectImage = styled.img.attrs({
   width: 31.5rem;
 `;
 
-const ProjectPDiv = styled.div.attrs({
-  className: 'pt2 pb2',
-})``;
-
 const ProjectContainer = styled.div.attrs({
   className: '',
 })`
@@ -128,6 +126,12 @@ const ProjectContainer = styled.div.attrs({
   gap: 30px;
   justify-items: center;
 `;
+const Project = styled.div.attrs({
+  className: 'bg-purple br4 shadow-3',
+})``;
+const ProjectPDiv = styled.div.attrs({
+  className: 'pt2 pb2',
+})``;
 
 const ProjectP = styled.div.attrs({
   className: 'f4 white ph3 pb3 lh-copy',
@@ -262,7 +266,7 @@ const Index = () => {
       <div className="tc pt2">
         <StyledSectionHeading>My Projects</StyledSectionHeading>
         <ProjectContainer className="">
-          <div className="bg-purple">
+          <Project>
             <StyledHeading className="white pt3 f2 f1-m f1-l">
               Raulfits
             </StyledHeading>
@@ -273,8 +277,8 @@ const Index = () => {
                 It uses React, Apollo, GraphQL and Prisma.
               </ProjectP>
             </ProjectPDiv>
-          </div>
-          <div className="bg-purple">
+          </Project>
+          <Project>
             <StyledHeading className="white pt3 f2 f1-m f1-l">
               Face-App
             </StyledHeading>
@@ -285,8 +289,8 @@ const Index = () => {
                 Clarifai API. It uses React, Node.js, and Express.
               </ProjectP>
             </ProjectPDiv>
-          </div>
-          <div className="bg-purple">
+          </Project>
+          <Project>
             <StyledHeading className="white pt3 f2 f1-m f1-l">
               Roboamigos
             </StyledHeading>
@@ -297,7 +301,7 @@ const Index = () => {
                 robots, and fake JSON for their data.
               </ProjectP>
             </ProjectPDiv>
-          </div>
+          </Project>
         </ProjectContainer>
       </div>
     </Layout>
