@@ -41,8 +41,8 @@ const About = () => (
         <AboutLink href="https://thekaizenwolf.github.io/roboamigos/">
           first
         </AboutLink>{' '}
-        React site, then software development became for me a way of life, a way
-        to bring amazing ideas become reality.
+        React site, then software development became a way of life for me, a way
+        to bring amazing ideas to reality.
       </AboutContent>
     </AboutContainer>
   </Layout>
