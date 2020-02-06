@@ -107,7 +107,9 @@ const TechnologiesContainer = styled.div.attrs({
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
-
+const TechnologiesP = styled.p.attrs({ className: 'f3 white' })`
+  font-family: 'Proxima Nova Black';
+`;
 const TechnologyContainer = styled.div.attrs({
   className: 'grow',
 })``;
@@ -157,7 +159,7 @@ const Index = () => {
         <StyledHeroHContainer className="">
           <div className="flex justify-center">
             <StyledHeading className="w-100 ph2 white">
-              I Am A Full-Stack Developer
+              I Am A Front-End Developer
             </StyledHeading>
           </div>
           <div className="flex justify-center">
@@ -182,7 +184,7 @@ const Index = () => {
           <StyledFaDesktop />
           <StyledFaDev />
           <StyledRowP>
-            I build projects, front-end and back-end with a focus on{' '}
+            I build projects with a great focus on{' '}
             <a href="" className="light-purple no-underline">
               scalability
             </a>{' '}
@@ -227,23 +229,22 @@ const Index = () => {
       </StyledRow>
       <div className="tc pt2">
         <StyledSectionHeading className="">Technologies</StyledSectionHeading>
+        <div className="bg-light-purple br-pill pv2 ph5 mb3 mh5-l bb b--pink bw3">
+          <TechnologiesP>
+            I am a <a className="light-blue">JAMStack specialist</a> with a big
+            passion for delivering excellent static and dynamic user
+            experiences.{' '}
+            <a className="light-green">Cloud CMS, lambda functions</a>, whatever
+            your needs, I will bring a{' '}
+            <a className="light-green">complete, secure and great performing</a>{' '}
+            product.
+          </TechnologiesP>
+        </div>
         <TechnologiesContainer>
-          <TechnologyContainer>
-            <img src="img/html.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              HTML
-            </StyledHeading>
-          </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/javascript.png" />
             <StyledHeading className="f3 bg-light-purple white br-pill pa2">
               Javascript
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
-            <img src="img/css.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              CSS
             </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
@@ -265,27 +266,9 @@ const Index = () => {
             </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
-            <img src="img/redux.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              Redux
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
-            <img src="img/nodejs.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              Node.js
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
             <img src="img/graphql.png" />
             <StyledHeading className="f3 bg-light-purple white br-pill pa2">
               GraphQL
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
-            <img src="img/docker.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              Docker
             </StyledHeading>
           </TechnologyContainer>
         </TechnologiesContainer>
