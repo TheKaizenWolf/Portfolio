@@ -9,6 +9,7 @@ const NavLink = styled(Link).attrs({
   @media (max-width: 60em) {
     display: none;
   }
+  font-family: 'Proxima Nova Black';
 `;
 const Nav = () => (
   <div className="flex justify-end">

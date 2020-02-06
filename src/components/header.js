@@ -5,7 +5,9 @@ import Nav from './nav';
 
 const Logo = styled(Link).attrs({
   className: 'f2 fw8 no-underline white',
-})``;
+})`
+  font-family: 'Proxima Nova Black';
+`;
 
 const StyledHeader = styled.header.attrs({
   className: 'bg-purple',

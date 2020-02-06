@@ -5,6 +5,9 @@ import {
   FaCommentDots,
   FaDesktop,
   FaMoneyBill,
+  FaDev,
+  FaCheckCircle,
+  FaCoins,
 } from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -51,6 +54,15 @@ const StyledFaCommentDots = styled(FaCommentDots).attrs({
 const StyledFaMoneyBill = styled(FaMoneyBill).attrs({
   className: 'pl3 dark-pink v-mid dib f2 tc pt2',
 })``;
+const StyledFaDev = styled(FaDev).attrs({
+  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
+})``;
+const StyledFaCheckCirle = styled(FaCheckCircle).attrs({
+  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
+})``;
+const StyledFaCoins = styled(FaCoins).attrs({
+  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
+})``;
 const StyledRow = styled.div.attrs({
   className:
     'bg-purple ph2 bb bw3 b--light-purple flex flex-row-l flex-column justify-center animated fadeIn delay-1s br4 ',
@@ -76,7 +88,7 @@ const StyledRowHeading = styled.h1.attrs({
 `;
 
 const StyledRowP = styled.p.attrs({
-  className: 'f4 fw6 black-70',
+  className: 'f4 fw6 ph3 black-70',
 })``;
 
 const TechnologiesContainer = styled.div.attrs({
@@ -111,25 +123,10 @@ const ProjectPDiv = styled.div.attrs({
 const ProjectContainer = styled.div.attrs({
   className: '',
 })`
-  div {
-    margin: 0 auto;
-    width: 600px;
-  }
-  @media (max-width: 45rem) and (min-width: 35rem) {
-    div {
-      width: 450px;
-    }
-  }
-  @media (max-width: 35rem) {
-    div {
-      width: 325px;
-    }
-    @media (max-width: 27.5rem) {
-      div {
-        width: 275px;
-      }
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
 `;
 
 const ProjectP = styled.div.attrs({
@@ -179,23 +176,41 @@ const Index = () => {
         <StyledRowContainer>
           <StyledRowHeading>Development</StyledRowHeading>
           <StyledFaDesktop />
+          <StyledFaDev />
           <StyledRowP>
-            Your project will have a great attention to detail, front-end and
-            back-end.
+            I build projects, front-end and back-end with a focus on scalability
+            and performance. My skills will bring your project to the top.
           </StyledRowP>
         </StyledRowContainer>
         <StyledRowContainer>
           <StyledRowHeading>Communication</StyledRowHeading>
           <StyledFaCommentDots />
+          <StyledFaCheckCirle />
+
           <StyledRowP>
-            We will use Trello and Slack in order to communicate effectively.
+            Communication is the most important part of a project. We will use
+            <a href="https://trello.com/en" className="blue no-underline">
+              {' '}
+              Trello
+            </a>{' '}
+            and{' '}
+            <a
+              href="https://slack.com/intl/en-cl/"
+              className="green no-underline"
+            >
+              Slack
+            </a>{' '}
+            in order to communicate effectively.
           </StyledRowP>
         </StyledRowContainer>
         <StyledRowContainer>
           <StyledRowHeading>Pricing</StyledRowHeading>
           <StyledFaMoneyBill />
+          <StyledFaCoins />
           <StyledRowP>
-            Need flexible pricing? Hourly or fixed prices are accepted.
+            Need flexible pricing? Negotiable prices, and hourly, daily and
+            fixed rates are accepted. You will get the best value out of your
+            investment.
           </StyledRowP>
         </StyledRowContainer>
       </StyledRow>

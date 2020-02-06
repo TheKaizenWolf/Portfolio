@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
+import { Title } from '../pages/blog';
 
 const StyledP = styled.p.attrs({ className: 'f4' })``;
 
@@ -32,12 +33,12 @@ export const query = graphql`
 const PostTemplate = ({ data }) => (
   <Layout>
     <div className="ph4-l tc">
-      <h1 className="f2 purple underline">{data.gcms.post.title}</h1>
+      <Title className="tc-l mh6-l">{data.gcms.post.title}</Title>
       <StyledImg src={data.gcms.post.image.url} alt={data.gcms.post.slug} />
       <p className="f4">
         Posted by <b>{data.gcms.post.author}</b>
       </p>
-      <p>{data.gcms.post.content}</p>
+      <p className="f3 fw6 black-70">{data.gcms.post.content}</p>
     </div>
   </Layout>
 );
