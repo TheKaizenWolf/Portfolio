@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Raul Web Arts',
-    description: 'Raul Web Arts',
+    title: 'Raul Saavedra',
+    description: 'Raul Saavedra',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -26,12 +26,6 @@ module.exports = {
       options: {
         name: 'images',
         path: 'images',
-      },
-    },
-    {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        username: 'kaizenweb',
       },
     },
     {

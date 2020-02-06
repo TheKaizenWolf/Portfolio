@@ -15,7 +15,6 @@ const About = () => (
       Chile. I love to code, to travel, and to pet dogs. <br />I follow the
       Kaizen philosophy, which translates to continuous improvement everyday.
     </AboutContent>
-    <Insta />
   </Layout>
 );
 
