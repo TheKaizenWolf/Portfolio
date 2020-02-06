@@ -88,8 +88,10 @@ const StyledRowHeading = styled.h1.attrs({
 `;
 
 const StyledRowP = styled.p.attrs({
-  className: 'f4 fw6 ph3 black-70',
-})``;
+  className: 'f4 fw6 ph3 black-50',
+})`
+  font-family: 'Proxima Nova Black';
+`;
 
 const TechnologiesContainer = styled.div.attrs({
   className: '',
@@ -209,7 +211,7 @@ const Index = () => {
           <StyledFaCoins />
           <StyledRowP>
             Need flexible pricing? Negotiable prices, and hourly, daily and
-            fixed rates are accepted. You will get the best value out of your
+            fixed rates are accepted. You will get the best out of your
             investment.
           </StyledRowP>
         </StyledRowContainer>
