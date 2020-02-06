@@ -19,7 +19,7 @@ const MenuLink = styled(Link).attrs({
 const Footer = styled.div.attrs({ className: 'mt4 pa2 bg-purple tc' })``;
 
 const FooterHeading = styled.h1.attrs({
-  className: 'f3 white',
+  className: 'f4 white',
 })`
   font-family: 'Proxima Nova Black';
 `;
@@ -45,7 +45,9 @@ const Layout = ({ children }) => {
       <Header />
       <Inner>{children}</Inner>
       <Footer>
-        <FooterHeading>Copyright © 2019. All rights reserved. </FooterHeading>
+        <FooterHeading>
+          Copyright © 2019 Raul Saavedra. All rights reserved.{' '}
+        </FooterHeading>
       </Footer>
     </div>
   );
