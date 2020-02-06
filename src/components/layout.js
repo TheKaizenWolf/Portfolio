@@ -16,6 +16,13 @@ const Inner = styled.div.attrs({
 const MenuLink = styled(Link).attrs({
   className: 'f3 white link pb4 fw8',
 })``;
+const Footer = styled.div.attrs({ className: 'mt4 pa2 bg-purple tc' })``;
+
+const FooterHeading = styled.h1.attrs({
+  className: 'f3 white',
+})`
+  font-family: 'Proxima Nova Black';
+`;
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -37,6 +44,9 @@ const Layout = ({ children }) => {
       </Menu>
       <Header />
       <Inner>{children}</Inner>
+      <Footer>
+        <FooterHeading>Copyright © 2019. All rights reserved. </FooterHeading>
+      </Footer>
     </div>
   );
 };
