@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Insta from '../components/insta';
 import Layout from '../components/layout';
 import { Title } from './blog';
 
