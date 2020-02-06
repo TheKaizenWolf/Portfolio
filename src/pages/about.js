@@ -14,7 +14,7 @@ const AboutContent = styled.p.attrs({
   }
 `;
 const AboutMeImg = styled.img.attrs({
-  className: 'br4',
+  className: 'shadow-3 br4 grow',
 })`
   max-width: 350px;
 `;
