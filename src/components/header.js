@@ -31,7 +31,7 @@ const Header = () => (
   <StyledHeader>
     <div className="bar pa3 tc">
       <Logo className="pl3" to="/">
-        Kaizen Web Arts
+        Raul Web Arts
       </Logo>
       <Nav />
     </div>
