@@ -22,7 +22,7 @@ const StyledHeading = styled.h1.attrs({
 `;
 const StyledSectionHeading = styled.h1.attrs({
   className:
-    'f1 fw8 tc pv3 white bg-purple mh6-l br-pill bb b--light-purple bw3 ',
+    'f1 fw8 tc pv3 white bg-purple mh6-l br-pill bb b--light-purple bw3',
 })`
   font-family: 'Proxima Nova Black';
 `;
@@ -182,8 +182,12 @@ const Index = () => {
           <StyledFaDesktop />
           <StyledFaDev />
           <StyledRowP>
-            I build projects, front-end and back-end with a focus on scalability
-            and performance. My skills will bring your project to the top.
+            I build projects, front-end and back-end with a focus on{' '}
+            <a href="" className="light-purple no-underline">
+              scalability
+            </a>{' '}
+            and <a className="light-purple no-underline">performance</a>. My
+            skills will bring your project to the top.
           </StyledRowP>
         </StyledRowContainer>
         <StyledRowContainer>
@@ -192,7 +196,10 @@ const Index = () => {
           <StyledFaCheckCirle />
 
           <StyledRowP>
-            Communication is the most important part of a project. We will use
+            <a className="light-purple no-underline">
+              Communication is the most important{' '}
+            </a>{' '}
+            part of a project. We will use
             <a href="https://trello.com/en" className="blue no-underline">
               {' '}
               Trello
@@ -212,9 +219,9 @@ const Index = () => {
           <StyledFaMoneyBill />
           <StyledFaCoins />
           <StyledRowP>
-            Need flexible pricing? Negotiable prices, and hourly, daily and
-            fixed rates are accepted. You will get the best out of your
-            investment.
+            <a className="light-purple no-underline">Need flexible pricing?</a>{' '}
+            Negotiable prices, and hourly, daily and fixed rates are accepted.
+            You will get the best out of your investment.
           </StyledRowP>
         </StyledRowContainer>
       </StyledRow>
@@ -223,43 +230,63 @@ const Index = () => {
         <TechnologiesContainer>
           <TechnologyContainer>
             <img src="img/html.png" />
-            <StyledHeading className="f3">HTML</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              HTML
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/javascript.png" />
-            <StyledHeading className="f3">Javascript</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              Javascript
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/css.png" />
-            <StyledHeading className="f3">CSS</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              CSS
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/react.png" />
-            <StyledHeading className="f3">React</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              React
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/typescript.png" />
-            <StyledHeading className="f3">Typescript</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              Typescript
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/apollo.png" />
-            <StyledHeading className="f3">Apollo</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              Apollo
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/redux.png" />
-            <StyledHeading className="f3">Redux</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              Redux
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/nodejs.png" />
-            <StyledHeading className="f3">Node.js</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              Node.js
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/graphql.png" />
-            <StyledHeading className="f3">GraphQL</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              GraphQL
+            </StyledHeading>
           </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/docker.png" />
-            <StyledHeading className="f3">Docker</StyledHeading>
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              Docker
+            </StyledHeading>
           </TechnologyContainer>
         </TechnologiesContainer>
       </div>
