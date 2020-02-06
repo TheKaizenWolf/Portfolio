@@ -229,7 +229,7 @@ const Index = () => {
       </StyledRow>
       <div className="tc pt2">
         <StyledSectionHeading className="">Technologies</StyledSectionHeading>
-        <div className="bg-light-purple br-pill pv2 ph5 mb3 mh5-l bb b--pink bw3">
+        <div className="bg-light-purple br-pill pv2 ph5-l ph4 mb3 mh5-l bb b--pink bw3">
           <TechnologiesP>
             I am a <a className="light-blue">JAMStack specialist</a> with a big
             passion for delivering excellent static and dynamic user
