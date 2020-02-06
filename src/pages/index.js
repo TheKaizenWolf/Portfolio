@@ -65,7 +65,7 @@ const StyledFaCoins = styled(FaCoins).attrs({
 })``;
 const StyledRow = styled.div.attrs({
   className:
-    'bg-purple ph2 bb bw3 b--light-purple flex flex-row-l flex-column justify-center animated fadeIn delay-1s br4 ',
+    'bg-purple ph2 bb bt bw3 b--light-purple flex flex-row-l flex-column justify-center animated fadeIn delay-1s br4 ',
 })`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -77,7 +77,7 @@ const StyledRow = styled.div.attrs({
 `;
 
 const StyledRowContainer = styled.div.attrs({
-  className: 'bg-white ma3 mb3 tc ph2 ba b--black bw2 grow br4',
+  className: 'bg-white ma3 mb3 tc ph2 ba b--light-purple bw2 grow br4',
 })``;
 
 const StyledRowHeading = styled.h1.attrs({
