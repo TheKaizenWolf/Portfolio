@@ -147,11 +147,8 @@ const ProjectContainer = styled.div.attrs({
 const Project = styled.div.attrs({
   className: 'bg-purple br4 shadow-3 ma2',
 })`
-  max-width: 500px;
+  max-width: 400px;
   @media (max-width: 60rem) {
-    max-width: 400px;
-  }
-  @media (max-width: 30rem) {
     max-width: 300px;
   }
 `;
