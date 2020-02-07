@@ -25,6 +25,9 @@ const StyledSectionHeading = styled.h1.attrs({
     'f1 fw8 tc pv3 white bg-purple mh6-l br-pill bb b--light-purple bw3',
 })`
   font-family: 'Proxima Nova Black';
+  @media (max-width: 30rem) {
+    font-size: 2.5rem;
+  }
 `;
 const StyledHeroContainer = styled.div.attrs({
   className: 'relative flex flex-row justify-center items-center tc',
@@ -78,13 +81,20 @@ const StyledRow = styled.div.attrs({
 
 const StyledRowContainer = styled.div.attrs({
   className: 'bg-white ma3 mb3 tc ph2 ba b--light-purple bw2 grow br4',
-})``;
+})`
+  @media (max-width: 30rem) {
+    max-width: 300px;
+  }
+`;
 
 const StyledRowHeading = styled.h1.attrs({
   className: 'mb0 white br-pill bg-light-purple pv2 mh4',
 })`
   font-family: 'Proxima Nova Black';
   font-size: 2rem;
+  @media (max-width: 30rem) {
+    font-size: 1.5rem;
+  }
 `;
 
 const StyledRowP = styled.p.attrs({
@@ -96,23 +106,30 @@ const StyledRowP = styled.p.attrs({
 const TechnologiesContainer = styled.div.attrs({
   className: '',
 })`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: 45rem) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (max-width: 65rem) and (min-width: 45rem) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 `;
 const TechnologiesP = styled.p.attrs({ className: 'f3 white' })`
   font-family: 'Proxima Nova Black';
 `;
 const TechnologyContainer = styled.div.attrs({
-  className: 'grow',
-})``;
+  className: 'grow ma3-l ma1',
+})`
+  img {
+    width: 300px;
+  }
+  @media (max-width: 60rem) {
+    img {
+      width: 200px;
+    }
+  }
+  @media (max-width: 30rem) {
+    img {
+      width: 100px;
+    }
+  }
+`;
 
 const ProjectImage = styled.img.attrs({
   className: 'grow bb bt bw5 b--light-purple',
@@ -123,14 +140,21 @@ const ProjectImage = styled.img.attrs({
 const ProjectContainer = styled.div.attrs({
   className: '',
 })`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 const Project = styled.div.attrs({
-  className: 'bg-purple br4 shadow-3',
-})``;
+  className: 'bg-purple br4 shadow-3 ma2',
+})`
+  max-width: 500px;
+  @media (max-width: 60rem) {
+    max-width: 400px;
+  }
+  @media (max-width: 30rem) {
+    max-width: 300px;
+  }
+`;
 const ProjectPDiv = styled.div.attrs({
   className: 'pt2 pb2',
 })``;
@@ -229,7 +253,7 @@ const Index = () => {
       </StyledRow>
       <div className="tc pt2">
         <StyledSectionHeading className="">Technologies</StyledSectionHeading>
-        <div className="bg-light-purple br-pill pv2-l pv3 ph5-l ph4 mb3 mh5-l bb b--pink bw3">
+        <div className="bg-light-purple br-pill pv2-l pv3 ph5-l ph3 mb3 mh5-l bb b--pink bw3">
           <TechnologiesP>
             I am a <a className="light-blue">JAMStack specialist</a> with a big
             passion for delivering excellent static and dynamic user
@@ -241,6 +265,18 @@ const Index = () => {
           </TechnologiesP>
         </div>
         <TechnologiesContainer>
+          <TechnologyContainer>
+            <img src="img/html.png" />
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              HTML
+            </StyledHeading>
+          </TechnologyContainer>
+          <TechnologyContainer>
+            <img src="img/css.png" />
+            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
+              CSS
+            </StyledHeading>
+          </TechnologyContainer>
           <TechnologyContainer>
             <img src="img/javascript.png" />
             <StyledHeading className="f3 bg-light-purple white br-pill pa2">
