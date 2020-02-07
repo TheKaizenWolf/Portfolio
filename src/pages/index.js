@@ -345,6 +345,18 @@ const Index = () => {
               </ProjectP>
             </ProjectPDiv>
           </Project>
+          <Project>
+            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              Hacker News
+            </StyledHeading>
+            <ProjectImage src="img/hacker-clone.png" />
+            <ProjectPDiv>
+              <ProjectP>
+                This is a Hacker News clone that uses React.js + Material UI +
+                Node.js + Express + MongoDB and it is fully dockerized.
+              </ProjectP>
+            </ProjectPDiv>
+          </Project>
         </ProjectContainer>
       </div>
     </Layout>
