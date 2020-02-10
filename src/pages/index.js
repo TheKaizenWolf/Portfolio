@@ -254,11 +254,9 @@ const Index = () => {
           <TechnologiesP>
             I am a <a className="light-blue">JAMStack specialist</a> with a big
             passion for delivering excellent static and dynamic user
-            experiences. Including{' '}
-            <a className="light-green">
-              integrations with, Cloud CMS, lambda functions
-            </a>
-            , whatever your needs, I will bring a{' '}
+            experiences. Including integrations with{' '}
+            <a className="light-green">Cloud CMS, lambda functions</a>, whatever
+            your needs, I will bring a{' '}
             <a className="light-green">complete, secure and great performing</a>{' '}
             product.
           </TechnologiesP>
