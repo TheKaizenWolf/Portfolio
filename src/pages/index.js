@@ -11,6 +11,7 @@ import {
 } from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
 import Image from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
 
 const StyledHeading = styled.h1.attrs({
