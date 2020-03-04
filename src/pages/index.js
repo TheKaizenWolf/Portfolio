@@ -223,7 +223,7 @@ const Index = () => {
               Communication is the most important{' '}
             </a>{' '}
             part of a project. We will use
-            <a href="https://trello.com/en" className="blue no-underline">
+            <a href="https://trello.com/en" className="red no-underline">
               {' '}
               Todoist
             </a>{' '}
