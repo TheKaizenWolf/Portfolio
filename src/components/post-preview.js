@@ -23,7 +23,11 @@ const PostTitle = styled.h3.attrs({
 const PostPreview = ({ post }) => (
   <StyledArticle>
     <PostImageContainer to={post.slug}>
-      <img className="shadow-3 dim" src={post.image} alt={post.title} />
+      <Image
+        className="shadow-3 dim"
+        fluid={post.image.sharp.fluid}
+        alt={post.title}
+      />
     </PostImageContainer>
     <div>
       <PostTitle>{post.title}</PostTitle>

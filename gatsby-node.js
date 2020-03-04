@@ -1,9 +1,11 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      gcms {
-        posts {
-          slug
+      allMdx {
+        nodes {
+          frontmatter {
+            slug
+          }
         }
       }
     }
@@ -13,14 +15,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panic('failed to create posts', result.errors);
   }
 
-  const { posts } = result.data.gcms;
+  const posts = result.data.allMdx.nodes;
 
   posts.forEach(post => {
     actions.createPage({
-      path: post.slug,
+      path: post.frontmatter.slug,
       component: require.resolve('./src/templates/post.js'),
       context: {
-        slug: post.slug,
+        slug: post.frontmatter.slug,
       },
     });
   });
