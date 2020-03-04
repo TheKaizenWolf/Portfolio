@@ -225,7 +225,7 @@ const Index = () => {
             part of a project. We will use
             <a href="https://trello.com/en" className="blue no-underline">
               {' '}
-              Trello
+              Todoist
             </a>{' '}
             and{' '}
             <a
@@ -242,9 +242,8 @@ const Index = () => {
           <StyledFaMoneyBill />
           <StyledFaCoins />
           <StyledRowP>
-            <a className="light-purple no-underline">Need flexible pricing?</a>{' '}
-            Negotiable prices, and hourly, daily and fixed rates are accepted.
-            You will get the best out of your investment.
+            <a className="light-purple no-underline">I charge by value-based pricing.</a>{' '}
+            The services I provide are priced by the success I bring to your business.
           </StyledRowP>
         </StyledRowContainer>
       </StyledRow>
