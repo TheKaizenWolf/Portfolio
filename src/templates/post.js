@@ -15,7 +15,7 @@ export const query = graphql`
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        author
+        date
       }
       body
     }
@@ -27,7 +27,7 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     <div className="ph4-l tc">
       <Title className="tc-l mh6-l">{post.frontmatter.title}</Title>
       <p className="f4 white dib bg-dark-pink br-pill pa2 ma0">
-        Posted by <b>{post.frontmatter.author}</b>
+        Posted on <b>{post.frontmatter.date}</b>
       </p>
       <MDXProvider components={components}>
         <MDXRenderer>{post.body}</MDXRenderer>
