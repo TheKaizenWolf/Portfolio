@@ -10,9 +10,7 @@ import {
   FaCoins,
 } from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
-import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
 
 const StyledHeading = styled.h1.attrs({
@@ -112,6 +110,8 @@ const TechnologiesContainer = styled.div.attrs({
 `;
 const TechnologiesP = styled.p.attrs({ className: 'f3 white' })`
   font-family: 'Proxima Nova Black';
+  .p {
+  }
 `;
 const TechnologyContainer = styled.div.attrs({
   className: 'grow ma3-l ma1',
@@ -242,8 +242,11 @@ const Index = () => {
           <StyledFaMoneyBill />
           <StyledFaCoins />
           <StyledRowP>
-            <a className="light-purple no-underline">I charge by value-based pricing.</a>{' '}
-            The services I provide are priced by the success I bring to your business.
+            <a className="light-purple no-underline">
+              I charge by value-based pricing.
+            </a>{' '}
+            The services I provide are priced by the success I bring to your
+            business.
           </StyledRowP>
         </StyledRowContainer>
       </StyledRow>
