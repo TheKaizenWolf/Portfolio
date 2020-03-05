@@ -12,96 +12,97 @@ import {
 import { GoMarkGithub } from 'react-icons/go';
 import Image from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import tw from 'tailwind.macro';
 import Layout from '../components/layout';
 
-const StyledHeading = styled.h1.attrs({
-  className: 'f1 fw8',
-})`
-  font-family: 'Proxima Nova Black';
-`;
-const StyledSectionHeading = styled.h1.attrs({
-  className:
-    'f1 fw8 tc pv3 white bg-purple mh6-l br-pill bb b--light-purple bw3',
-})`
-  font-family: 'Proxima Nova Black';
-  @media (max-width: 30rem) {
-    font-size: 2.5rem;
-  }
-`;
 const StyledHeroContainer = styled.div.attrs({
-  className: 'relative flex flex-row justify-center items-center tc',
+  className: 'relative flex flex-row justify-center items-center text-center',
 })`
   height: 67vh;
   overflow: hidden;
-`;
-const StyledHeroHContainer = styled.div.attrs({
-  className: 'flex flex-column animated bounceInLeft bg-purple br-pill pa4 ',
-})``;
-const HeroImageContainer = styled.div.attrs({
-  className: 'animated bounceInRight',
-})`
-  width: 500px;
-  margin: 0 auto;
 
-  @media (max-width: 75rem) {
-    display: none;
+  .left-section {
+    ${tw`flex flex-col rounded-full bg-purple-800 p-8 py-12`}
+  }
+  .right-section {
+    width: 500px;
+    margin: 0 auto;
+
+    @media (max-width: 75rem) {
+      display: none;
+    }
+  }
+  .icons {
+    ${tw`text-6xl hover:text-gray-500 text-white pb-2`}
+    border-bottom: 0.40rem solid white
   }
 `;
-const StyledFaDesktop = styled(FaDesktop).attrs({
-  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
-})``;
-const StyledFaCommentDots = styled(FaCommentDots).attrs({
-  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
-})``;
-const StyledFaMoneyBill = styled(FaMoneyBill).attrs({
-  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
-})``;
-const StyledFaDev = styled(FaDev).attrs({
-  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
-})``;
-const StyledFaCheckCirle = styled(FaCheckCircle).attrs({
-  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
-})``;
-const StyledFaCoins = styled(FaCoins).attrs({
-  className: 'pl3 dark-pink v-mid dib f2 tc pt2',
-})``;
+
+const StyledHeading = styled.h1.attrs({
+  className: 'text-5xl font-bold',
+})`
+  font-family: 'Proxima Nova Black';
+`;
+
 const StyledRow = styled.div.attrs({
   className:
-    'bg-purple ph2 bb bt bw3 b--light-purple flex flex-row-l flex-column justify-center animated fadeIn delay-1s br4 ',
+    'bg-purple-800 px-1 mb-5 flex lg:flex-row flex-col justify center animatedFadeIn delay-1s rounded-lg',
 })`
   display: grid;
+  border-top: 5px solid #a463f2;
+  border-bottom: 5px solid #a463f2;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-flow: row;
   justify-items: center;
   @media (max-width: 75rem) {
     grid-template-columns: 1fr;
   }
-`;
 
-const StyledRowContainer = styled.div.attrs({
-  className: 'bg-white ma3 mb3 tc ph2 ba b--light-purple bw2 grow br4',
-})`
-  @media (max-width: 30rem) {
-    max-width: 300px;
+  .row-container {
+    ${tw`bg-white m-4 py-5 mb-3 text-center px-6 rounded-lg`}
+    border: 5px solid #A463F2;
+    .row-heading {
+      ${tw`mb-0 text-white rounded-full py-1 mx-4`}
+      background: #A463F2;
+      font-family: 'Proxima Nova Black';
+      font-size: 2rem;
+      @media (max-width: 30rem) {
+        font-size: 1.5rem;
+      }
+    }
+    .row-icon {
+      ${tw`mx-2 text-pink-600 align-middle inline-block text-4xl text-center mt-2 mb-4`}
+    }
+    .row-text {
+      ${tw`text-xl px-2 text-gray-600 leading-tight`}
+      font-family: 'Proxima Nova Black';
+      .purple-link {
+        ${tw`no-underline font-black`}
+        color: #A463F2;
+      }
+
+      .red-link {
+        ${tw`text-red-500 no-underline`}
+      }
+      .green-link {
+        ${tw`text-green-500 no-underline`}
+      }
+    }
   }
 `;
 
-const StyledRowHeading = styled.h1.attrs({
-  className: 'mb0 white br-pill bg-light-purple pv2 mh4',
+const TechnologiesSection = styled.div.attrs({
+  className: 'tc pt2',
 })`
-  font-family: 'Proxima Nova Black';
-  font-size: 2rem;
-  @media (max-width: 30rem) {
-    font-size: 1.5rem;
+  .heading {
+    ${tw`text-5xl text-bold text-center py-5 text-white bg-purple-800 lg:mx-24 rounded-full`}
+    border-bottom: 8px solid #A463F2;
+    font-family: 'Proxima Nova Black';
+    @media (max-width: 30rem) {
+      font-size: 2.5rem;
+    }
   }
 `;
-
-const StyledRowP = styled.p.attrs({
-  className: 'f4 ph3 black-40',
-})`
-  font-family: 'Proxima Nova Black';
-`;
-
 const TechnologiesContainer = styled.div.attrs({
   className: '',
 })`
@@ -131,7 +132,18 @@ const TechnologyContainer = styled.div.attrs({
     }
   }
 `;
-
+const ProjectSection = styled.div.attrs({
+  className: 'tc pt2',
+})`
+  .heading {
+    ${tw`text-5xl text-bold text-center py-5 text-white bg-purple-800 lg:mx-24 rounded-full`}
+    border-bottom: 8px solid #A463F2;
+    font-family: 'Proxima Nova Black';
+    @media (max-width: 30rem) {
+      font-size: 2.5rem;
+    }
+  }
+`;
 const ProjectImage = styled.img.attrs({
   className: 'grow bb bt bw5 b--light-purple',
 })`
@@ -178,81 +190,72 @@ const Index = () => {
   return (
     <Layout>
       <StyledHeroContainer>
-        <StyledHeroHContainer className="">
+        <div className="left-section animated bounceInLeft">
           <div className="flex justify-center">
-            <StyledHeading className="w-100 ph2 white">
+            <StyledHeading className="width-full px-2 text-white mb-4">
               I Am A Front-End Developer
             </StyledHeading>
           </div>
           <div className="flex justify-center">
-            <a
-              className="black"
-              href="https://www.linkedin.com/in/raul-s-3138a6153/"
-            >
-              <FaLinkedinIn className="f1 bb bw3 grow pb2 mr4-l mr4 white" />
+            <a href="https://www.linkedin.com/in/raul-s-3138a6153/">
+              <FaLinkedinIn className="icons lg:mr-4" />
             </a>
-            <a className="black" href="https://github.com/TheKaizenWolf">
-              <GoMarkGithub className="f1 bb bw3 grow pb2 white" />
+            <a href="https://github.com/TheKaizenWolf">
+              <GoMarkGithub className="icons" />
             </a>
           </div>
-        </StyledHeroHContainer>
-        <HeroImageContainer>
+        </div>
+        <div className="right-section animated bounceInRight">
           <Image fluid={image.sharp.fluid} />
-        </HeroImageContainer>
+        </div>
       </StyledHeroContainer>
       <StyledRow>
-        <StyledRowContainer>
-          <StyledRowHeading>Development</StyledRowHeading>
-          <StyledFaDesktop />
-          <StyledFaDev />
-          <StyledRowP>
+        <div className="row-container">
+          <h1 className="row-heading">Development</h1>
+          <FaDesktop className="row-icon" />
+          <FaDev className="row-icon" />
+          <p className="row-text">
             I build projects with a great focus on{' '}
-            <a href="" className="light-purple no-underline">
+            <a href="" className="purple-link">
               scalability
             </a>{' '}
-            and <a className="light-purple no-underline">performance</a>. My
-            skills will bring your project to the top.
-          </StyledRowP>
-        </StyledRowContainer>
-        <StyledRowContainer>
-          <StyledRowHeading>Communication</StyledRowHeading>
-          <StyledFaCommentDots />
-          <StyledFaCheckCirle />
-
-          <StyledRowP>
-            <a className="light-purple no-underline">
-              Communication is the most important{' '}
-            </a>{' '}
+            and <a className="purple-link">performance</a>. My skills will bring
+            your project to the top.
+          </p>
+        </div>
+        <div className="row-container">
+          <h1 className="row-heading">Communication</h1>
+          <FaCommentDots className="row-icon" />
+          <FaCheckCircle className="row-icon" />
+          <p className="row-text">
+            <a className="purple-link">Communication is the most important </a>{' '}
             part of a project. We will use
-            <a href="https://trello.com/en" className="red no-underline">
+            <a href="https://trello.com/en" className="red-link">
               {' '}
               Todoist
             </a>{' '}
             and{' '}
-            <a
-              href="https://slack.com/intl/en-cl/"
-              className="green no-underline"
-            >
+            <a href="https://slack.com/intl/en-cl/" className="green-link">
               Slack
             </a>{' '}
             in order to communicate effectively.
-          </StyledRowP>
-        </StyledRowContainer>
-        <StyledRowContainer>
-          <StyledRowHeading>Pricing</StyledRowHeading>
-          <StyledFaMoneyBill />
-          <StyledFaCoins />
-          <StyledRowP>
+          </p>
+        </div>
+        <div className="row-container">
+          <h1 className="row-heading">Pricing</h1>
+          <FaMoneyBill className="row-icon" />
+          <FaCoins className="row-icon" />
+          <p className="row-text">
             <a className="light-purple no-underline">
               I charge by value-based pricing.
             </a>{' '}
             The services I provide are priced by the success I bring to your
             business.
-          </StyledRowP>
-        </StyledRowContainer>
+          </p>
+        </div>
       </StyledRow>
-      <div className="tc pt2">
-        <StyledSectionHeading className="">Technologies</StyledSectionHeading>
+      <TechnologiesSection>
+        <h1 className="heading">Technologies</h1>
         <div className="bg-light-purple br-pill pv2-l pv3 ph5-l ph3 mb3 mh5-l bb b--pink bw3">
           <TechnologiesP>
             I am a <a className="light-blue">JAMStack specialist</a> with a big
@@ -308,9 +311,9 @@ const Index = () => {
             </StyledHeading>
           </TechnologyContainer>
         </TechnologiesContainer>
-      </div>
-      <div className="tc pt2">
-        <StyledSectionHeading>My Projects</StyledSectionHeading>
+      </TechnologiesSection>
+      <ProjectSection>
+        <h1 className="heading">My Projects</h1>
         <ProjectContainer className="">
           <Project>
             <StyledHeading className="white pt3 f2 f1-m f1-l">
@@ -361,27 +364,8 @@ const Index = () => {
             </ProjectPDiv>
           </Project>
         </ProjectContainer>
-      </div>
+      </ProjectSection>
     </Layout>
   );
-};
-export {
-  StyledHeroContainer,
-  StyledHeroHContainer,
-  HeroImageContainer,
-  StyledFaDesktop,
-  StyledFaCommentDots,
-  StyledFaMoneyBill,
-  StyledRow,
-  StyledRowHeading,
-  StyledHeading,
-  StyledRowContainer,
-  StyledRowP,
-  TechnologiesContainer,
-  TechnologyContainer,
-  ProjectImage,
-  ProjectP,
-  ProjectPDiv,
-  ProjectContainer,
 };
 export default Index;

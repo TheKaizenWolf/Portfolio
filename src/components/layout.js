@@ -1,27 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import 'tachyons';
+
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
+import tw from 'tailwind.macro';
 import Header from './header';
 import useSiteMetadata from '../hooks/use-metadata';
-
 import './layout.css';
 
 const Inner = styled.div.attrs({
-  className: 'ph5-l ph4',
+  className: 'sm:px-6 md-px-8 lg:px-12 xl:px-16',
 })``;
 
 const MenuLink = styled(Link).attrs({
-  className: 'f3 white link pb4 fw8',
+  className: 'text-3xl text-white pb-6 font-bold',
 })``;
-const Footer = styled.div.attrs({ className: 'mt4 pa2 bg-purple tc' })``;
-
-const FooterHeading = styled.h1.attrs({
-  className: 'f4 white',
+const Footer = styled.div.attrs({
+  className: 'mt-8 p-2 bg-purple-800 text-center',
 })`
-  font-family: 'Proxima Nova Black';
+  h1 {
+    ${tw`text-2xl text-white`}
+    font-family: 'Proxima Nova Black'
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -45,9 +46,7 @@ const Layout = ({ children }) => {
       <Header />
       <Inner>{children}</Inner>
       <Footer>
-        <FooterHeading>
-          Copyright © 2019 Raul Saavedra. All rights reserved.{' '}
-        </FooterHeading>
+        <h1>Copyright © 2019 Raul Saavedra. All rights reserved. </h1>
       </Footer>
     </div>
   );
