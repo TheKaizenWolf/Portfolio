@@ -92,7 +92,7 @@ const StyledRow = styled.div.attrs({
 `;
 
 const TechnologiesSection = styled.div.attrs({
-  className: 'tc pt2',
+  className: 'text-center',
 })`
   .heading {
     ${tw`text-5xl text-bold text-center py-5 text-white bg-purple-800 lg:mx-24 rounded-full`}
@@ -102,67 +102,69 @@ const TechnologiesSection = styled.div.attrs({
       font-size: 2.5rem;
     }
   }
-`;
-const TechnologiesContainer = styled.div.attrs({
-  className: '',
-})`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-const TechnologiesP = styled.p.attrs({ className: 'f3 white' })`
-  font-family: 'Proxima Nova Black';
-  .p {
-  }
-`;
-const TechnologyContainer = styled.div.attrs({
-  className: 'grow ma3-l ma1',
-})`
-  img {
-    width: 300px;
-  }
-  @media (max-width: 60rem) {
-    img {
-      width: 200px;
+  .technologies {
+    ${tw`mt-2`}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .technology {
+      ${tw`m-4`}
+      img {
+        width: 300px;
+      }
+      @media (max-width: 60rem) {
+        img {
+          width: 200px;
+        }
+      }
+      @media (max-width: 30rem) {
+        img {
+          width: 100px;
+        }
+      }
+      .technology-heading {
+        ${tw`text-3xl text-white rounded-full mt-3`}
+        background: #A463F2;
+        font-family: 'Proxima Nova Black';
+      }
     }
   }
-  @media (max-width: 30rem) {
-    img {
-      width: 100px;
-    }
-  }
 `;
+
 const ProjectSection = styled.div.attrs({
   className: 'tc pt2',
 })`
   .heading {
-    ${tw`text-5xl text-bold text-center py-5 text-white bg-purple-800 lg:mx-24 rounded-full`}
+    ${tw`text-5xl text-bold text-center py-5 my-5 text-white bg-purple-800 lg:mx-24 rounded-full`}
     border-bottom: 8px solid #A463F2;
     font-family: 'Proxima Nova Black';
     @media (max-width: 30rem) {
       font-size: 2.5rem;
     }
   }
-`;
-const ProjectImage = styled.img.attrs({
-  className: 'grow bb bt bw5 b--light-purple',
-})`
-  width: 31.5rem;
-`;
-
-const ProjectContainer = styled.div.attrs({
-  className: '',
-})`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-const Project = styled.div.attrs({
-  className: 'bg-purple br4 shadow-3 ma2',
-})`
-  max-width: 400px;
-  @media (max-width: 60rem) {
-    max-width: 300px;
+  .image {
+    border-top: 12px solid #a463f2;
+    border-bottom: 12px solid #a463f2;
+    width: 31.5rem;
+  }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .project {
+      ${tw`text-center bg-purple-800 rounded-lg shadow-xl m-2`}
+      max-width: 400px;
+      @media (max-width: 60rem) {
+        max-width: 300px;
+      }
+      .project-text-div {
+        ${tw`pt-2 pb-2`}
+        .project-text {
+          ${tw`text-xl text-white px-5 pb-5 `}
+        }
+        font-family: 'Proxima Nova Black';
+      }
+    }
   }
 `;
 const ProjectPDiv = styled.div.attrs({
@@ -255,115 +257,94 @@ const Index = () => {
         </div>
       </StyledRow>
       <TechnologiesSection>
-        <h1 className="heading">Technologies</h1>
-        <div className="bg-light-purple br-pill pv2-l pv3 ph5-l ph3 mb3 mh5-l bb b--pink bw3">
-          <TechnologiesP>
-            I am a <a className="light-blue">JAMStack specialist</a> with a big
-            passion for delivering excellent static and dynamic user
-            experiences. Including integrations with{' '}
-            <a className="light-green">Cloud CMS, lambda functions</a>, whatever
-            your needs, I will bring a{' '}
-            <a className="light-green">complete, secure and great performing</a>{' '}
-            product.
-          </TechnologiesP>
+        <div>
+          <h1 className="heading">Technologies</h1>
         </div>
-        <TechnologiesContainer>
-          <TechnologyContainer>
+        <div className="technologies">
+          <div className="technology">
             <img src="img/html.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              HTML
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
+            <h2 className="technology-heading">HTML</h2>
+          </div>
+          <div className="technology">
             <img src="img/css.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              CSS
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
+            <h2 className="technology-heading">CSS</h2>
+          </div>
+          <div className="technology">
             <img src="img/javascript.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              Javascript
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
+            <h2 className="technology-heading">Javascript</h2>
+          </div>
+          <div className="technology">
             <img src="img/react.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              React
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
+            <h2 className="technology-heading">React</h2>
+          </div>
+          <div className="technology">
             <img src="img/typescript.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              Typescript
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
+            <h2 className="technology-heading">Typescript</h2>
+          </div>
+          <div className="technology">
             <img src="img/apollo.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              Apollo
-            </StyledHeading>
-          </TechnologyContainer>
-          <TechnologyContainer>
+            <h2 className="technology-heading">Apollo</h2>
+          </div>
+          <div className="technology">
             <img src="img/graphql.png" />
-            <StyledHeading className="f3 bg-light-purple white br-pill pa2">
-              GraphQL
-            </StyledHeading>
-          </TechnologyContainer>
-        </TechnologiesContainer>
+            <h2 className="technology-heading">GraphQL</h2>
+          </div>
+        </div>
       </TechnologiesSection>
       <ProjectSection>
-        <h1 className="heading">My Projects</h1>
-        <ProjectContainer className="">
-          <Project>
-            <StyledHeading className="white pt3 f2 f1-m f1-l">
+        <div>
+          <h1 className="heading">My Projects</h1>
+        </div>
+        <div className="projects">
+          <div className="project">
+            <StyledHeading className="text-white pt-4 pb-4 text-2xl">
               Raulfits
             </StyledHeading>
-            <ProjectImage src="img/rafits.png" />
-            <ProjectPDiv>
-              <ProjectP>
+            <img className="image" src="img/rafits.png" />
+            <div className="project-text-div">
+              <p className="project-text">
                 This project is a e-commerce store implementing a full CRUD API.
                 It uses React, Apollo, GraphQL and Prisma.
-              </ProjectP>
-            </ProjectPDiv>
-          </Project>
-          <Project>
-            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              </p>
+            </div>
+          </div>
+          <div className="project">
+            <StyledHeading className="text-white pt-4 pb-4 text-2xl">
               Face-App
             </StyledHeading>
-            <ProjectImage src="img/face.png" />
-            <ProjectPDiv>
-              <ProjectP>
+            <img className="image" src="img/face.png" />
+            <div className="project-text-div">
+              <p className="project-text">
                 This project is a face-recognition-app that utilizes the
                 Clarifai API. It uses React, Node.js, and Express.
-              </ProjectP>
-            </ProjectPDiv>
-          </Project>
-          <Project>
-            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              </p>
+            </div>
+          </div>
+          <div className="project">
+            <StyledHeading className="text-white pt-4 pb-4 text-2xl">
               Roboamigos
             </StyledHeading>
-            <ProjectImage src="img/robo.png" />
-            <ProjectPDiv>
-              <ProjectP>
+            <img className="image" src="img/robo.png" />
+            <div className="project-text-div">
+              <p className="project-text">
                 This project is a React App that utilizes robohash for the
                 robots, and fake JSON for their data.
-              </ProjectP>
-            </ProjectPDiv>
-          </Project>
-          <Project>
-            <StyledHeading className="white pt3 f2 f1-m f1-l">
+              </p>
+            </div>
+          </div>
+          <div className="project">
+            <StyledHeading className="text-white pt-4 pb-4 text-2xl">
               Hacker News
             </StyledHeading>
-            <ProjectImage src="img/hacker-clone.png" />
-            <ProjectPDiv>
-              <ProjectP>
+            <img className="image" src="img/hacker-clone.png" />
+            <div className="project-text-div">
+              <p className="project-text">
                 This is a Hacker News clone that uses React.js + Material UI +
                 Node.js + Express + MongoDB and it is fully dockerized.
-              </ProjectP>
-            </ProjectPDiv>
-          </Project>
-        </ProjectContainer>
+              </p>
+            </div>
+          </div>
+        </div>
       </ProjectSection>
     </Layout>
   );

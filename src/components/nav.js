@@ -18,7 +18,7 @@ const Nav = () => (
       Home
     </NavLink>
     <NavLink to="/blog">Blog</NavLink>
-    <NavLink to="/about" className="mr4">
+    <NavLink to="/about" className="mr-6">
       About
     </NavLink>
   </div>

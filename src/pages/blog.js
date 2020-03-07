@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import tw from 'tailwind.macro';
 import Layout from '../components/layout';
 import usePosts from '../hooks/use-posts';
 import PostPreview from '../components/post-preview';
 import Hero from '../components/hero';
 
 const Title = styled.h1.attrs({
-  className: 'f2 fw8 bb bw2 tc tl-l bg-purple br-pill pa2 pl3 white',
+  className:
+    'text-4xl font-bold text-center lg:text-left bg-purple-800 rounded-full p-2 pl-3 my-4 text-white',
 })`
+  border-bottom: 5px solid #a463f2;
   font-family: 'Proxima Nova Black';
 `;
 
