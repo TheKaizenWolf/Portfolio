@@ -111,6 +111,7 @@ const TechnologiesSection = styled.div.attrs({
       ${tw`m-4`}
       img {
         width: 300px;
+        margin: 0 auto;
       }
       @media (max-width: 60rem) {
         img {
@@ -123,7 +124,7 @@ const TechnologiesSection = styled.div.attrs({
         }
       }
       .technology-heading {
-        ${tw`text-3xl text-white rounded-full mt-3`}
+        ${tw`text-2xl lg:text-3xl text-white rounded-full mt-3 p-1`}
         background: #A463F2;
         font-family: 'Proxima Nova Black';
       }
