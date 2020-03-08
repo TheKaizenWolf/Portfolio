@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import tw from 'tailwind.macro';
 import Nav from './nav';
 
-const Logo = styled(Link).attrs({
-  className: 'f2 fw8 no-underline white',
-})`
-  font-family: 'Proxima Nova Black';
-`;
-
 const StyledHeader = styled.header.attrs({
-  className: 'bg-purple',
+  className: 'bg-purple-800 px-2',
 })`
   .bar {
     display: grid;
@@ -22,17 +17,17 @@ const StyledHeader = styled.header.attrs({
       justify-content: center;
     }
   }
-  .sub-bar {
-    display: grid;
-    grid-template-columns: 1fr auto;
+  .logo {
+    ${tw`text-4xl text-bold no-underline text-white pl-3`}
+    font-family: 'Proxima Nova Black'
   }
 `;
 const Header = () => (
   <StyledHeader>
-    <div className="bar pa3 tc">
-      <Logo className="pl3" to="/">
+    <div className="bar p-3 text-center">
+      <Link className="logo" to="/">
         Raul Saavedra
-      </Logo>
+      </Link>
       <Nav />
     </div>
   </StyledHeader>
