@@ -9,14 +9,14 @@ import Hero from '../components/hero';
 
 const Title = styled.h1.attrs({
   className:
-    'text-4xl font-bold text-center lg:text-left bg-purple-800 rounded-full p-2 pl-3 my-4 text-white',
+    'text-4xl font-bold text-center lg:text-left bg-purple-800 rounded-full p-1 pl-4 my-4 text-white',
 })`
   border-bottom: 5px solid #a463f2;
   font-family: 'Proxima Nova Black';
 `;
 
 const StyledLink = styled(Link).attrs({
-  className: 'f4 fw8 link dim dark-pink',
+  className: 'text-xl font-bold text-pink-600',
 })``;
 const Index = () => {
   const posts = usePosts();

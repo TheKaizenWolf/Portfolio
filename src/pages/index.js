@@ -167,16 +167,6 @@ const ProjectSection = styled.div.attrs({
     }
   }
 `;
-const ProjectPDiv = styled.div.attrs({
-  className: 'pt2 pb2',
-})``;
-
-const ProjectP = styled.div.attrs({
-  className: 'f4 white ph3 pb3 lh-copy',
-})`
-  font-family: 'Proxima Nova Black';
-`;
-
 const Index = () => {
   const { image } = useStaticQuery(graphql`
     query {
