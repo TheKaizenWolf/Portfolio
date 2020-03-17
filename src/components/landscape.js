@@ -9,10 +9,10 @@ const ImageBackground = styled(BackgroundImage).attrs({
   background-position: top 30% center;
   height: 35vh;
 `;
-const Hero = () => {
+const Landscape = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "hero.jpg" }) {
+      image: file(relativePath: { eq: "landscape.jpg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -25,4 +25,4 @@ const Hero = () => {
   return <ImageBackground Tag="section" fluid={image.sharp.fluid} />;
 };
 
-export default Hero;
+export default Landscape;

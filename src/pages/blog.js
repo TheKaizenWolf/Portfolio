@@ -5,7 +5,7 @@ import tw from 'tailwind.macro';
 import Layout from '../components/layout';
 import usePosts from '../hooks/use-posts';
 import PostPreview from '../components/post-preview';
-import Hero from '../components/hero';
+import Landscape from '../components/landscape';
 
 const Title = styled.h1.attrs({
   className:
@@ -22,7 +22,7 @@ const Index = () => {
   const posts = usePosts();
   return (
     <Layout>
-      <Hero />
+      <Landscape />
       <Title className="tc-m">My Latest Posts</Title>
       {posts.map(post => (
         <PostPreview key={post.slug} post={post} />
