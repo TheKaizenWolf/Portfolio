@@ -13,4 +13,5 @@ const Index = () => (
     <Projects />
   </Layout>
 );
+
 export default Index;

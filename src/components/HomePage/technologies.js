@@ -21,7 +21,7 @@ const TechnologiesSection = styled.div.attrs({
     .technology {
       ${tw`m-4`}
       img {
-        width: 300px;
+        width: 275px;
         margin: 0 auto;
       }
       @media (max-width: 60rem) {
@@ -72,6 +72,18 @@ const Technologies = () => (
       <div className="technology">
         <img src="img/apollo.png" alt="apollo" />
         <h2 className="technology-heading">Apollo</h2>
+      </div>
+      <div className="technology">
+        <img src="img/nodejs.png" alt="nodejs" />
+        <h2 className="technology-heading">Nodejs</h2>
+      </div>
+      <div className="technology">
+        <img src="img/mongodb.png" alt="mongodb" />
+        <h2 className="technology-heading">MongoDB</h2>
+      </div>
+      <div className="technology">
+        <img src="img/postgres.png" alt="postgres" />
+        <h2 className="technology-heading">Postgres</h2>
       </div>
       <div className="technology">
         <img src="img/graphql.png" alt="graphql" />
