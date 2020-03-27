@@ -51,7 +51,9 @@ const Projects = () => (
     <div className="projects">
       <div className="project">
         <h1 className="project-heading">Raulfits</h1>
-        <img className="image" src="img/rafits.png" />
+        <a href="https://raulfits-next-prod.herokuapp.com/">
+          <img className="image" src="img/rafits.png" />
+        </a>
         <div className="project-text-div">
           <p className="project-text">
             This project is a e-commerce store implementing a full CRUD API. It
@@ -61,7 +63,9 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Face-App</h1>
-        <img className="image" src="img/face.png" />
+        <a href="https://raulsaavedraapp.me/">
+          <img className="image" src="img/face.png" />
+        </a>
         <div className="project-text-div">
           <p className="project-text">
             This project is a face-recognition-app that utilizes the Clarifai
@@ -71,7 +75,9 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Roboamigos</h1>
-        <img className="image" src="img/robo.png" />
+        <a href="https://thekaizenwolf.github.io/roboamigos/">
+          <img className="image" src="img/robo.png" />
+        </a>
         <div className="project-text-div">
           <p className="project-text">
             This project is a React App that utilizes robohash for the robots,
@@ -81,7 +87,9 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Hacker News</h1>
-        <img className="image" src="img/hacker-clone.png" />
+        <a href="https://github.com/TheKaizenWolf/hacker-full-clone">
+          <img className="image" src="img/hacker-clone.png" />
+        </a>
         <div className="project-text-div">
           <p className="project-text">
             This is a Hacker News clone that uses React.js + Material UI +
