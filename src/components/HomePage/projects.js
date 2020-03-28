@@ -68,7 +68,7 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Now That's Delicious!</h1>
-        <a href="https://github.com/TheKaizenWolf/now-thats-delicious">
+        <a href="https://now-thats-delicious-raul.herokuapp.com/">
           <img
             className="image"
             loading="lazy"
