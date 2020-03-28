@@ -52,7 +52,12 @@ const Projects = () => (
       <div className="project">
         <h1 className="project-heading">Raulfits</h1>
         <a href="https://raulfits-next-prod.herokuapp.com/">
-          <img className="image" src="img/rafits.png" />
+          <img
+            className="image"
+            loading="lazy"
+            src="img/rafits.png"
+            alt="raulfits"
+          />
         </a>
         <div className="project-text-div">
           <p className="project-text">
@@ -62,9 +67,31 @@ const Projects = () => (
         </div>
       </div>
       <div className="project">
+        <h1 className="project-heading">Now That's Delicious!</h1>
+        <a href="https://github.com/TheKaizenWolf/now-thats-delicious">
+          <img
+            className="image"
+            loading="lazy"
+            src="img/delicious.png"
+            alt="now-thats-delicious"
+          />
+        </a>
+        <div className="project-text-div">
+          <p className="project-text">
+            This is a restaurants app that uses the Node.js, Express.js,
+            MongoDB, and Pug for the Frontend.
+          </p>
+        </div>
+      </div>
+      <div className="project">
         <h1 className="project-heading">Face-App</h1>
         <a href="https://raulsaavedraapp.me/">
-          <img className="image" src="img/face.png" />
+          <img
+            className="image"
+            loading="lazy"
+            src="img/face.png"
+            alt="Face-App"
+          />
         </a>
         <div className="project-text-div">
           <p className="project-text">
@@ -76,7 +103,12 @@ const Projects = () => (
       <div className="project">
         <h1 className="project-heading">Roboamigos</h1>
         <a href="https://thekaizenwolf.github.io/roboamigos/">
-          <img className="image" src="img/robo.png" />
+          <img
+            className="image"
+            loading="lazy"
+            src="img/robo.png"
+            alt="Roboamigos"
+          />
         </a>
         <div className="project-text-div">
           <p className="project-text">
@@ -88,7 +120,12 @@ const Projects = () => (
       <div className="project">
         <h1 className="project-heading">Hacker News</h1>
         <a href="https://github.com/TheKaizenWolf/hacker-full-clone">
-          <img className="image" src="img/hacker-clone.png" />
+          <img
+            className="image"
+            loading="lazy"
+            src="img/hacker-clone.png"
+            alt="Hacker News Clone"
+          />
         </a>
         <div className="project-text-div">
           <p className="project-text">
