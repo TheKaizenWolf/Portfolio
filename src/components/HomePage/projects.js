@@ -78,8 +78,8 @@ const Projects = () => (
         </a>
         <div className="project-text-div">
           <p className="project-text">
-            This is a restaurants app that uses the Node.js, Express.js,
-            MongoDB, and Pug for the Frontend.
+            This is a restaurants app that uses Node.js, Express.js, MongoDB,
+            and Pug for the Frontend.
           </p>
         </div>
       </div>
