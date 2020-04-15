@@ -85,7 +85,7 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Face-App</h1>
-        <a href="https://raulsaavedraapp.me/">
+        <a href="https://github.com/TheKaizenWolf/face-recognition-app">
           <img
             className="image"
             loading="lazy"
