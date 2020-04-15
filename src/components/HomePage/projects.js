@@ -61,8 +61,8 @@ const Projects = () => (
         </a>
         <div className="project-text-div">
           <p className="project-text">
-            This project is a e-commerce store implementing a full CRUD API. It
-            uses React, Apollo, GraphQL and Prisma.
+            This project is a e-commerce store implementing a full generated
+            CRUD API. It uses React, Apollo, GraphQL and Prisma.
           </p>
         </div>
       </div>
