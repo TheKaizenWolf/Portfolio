@@ -81,18 +81,6 @@ const Technologies = () => (
         <img src="img/graphql.png" alt="graphql" />
         <h2 className="technology-heading">GraphQL</h2>
       </div>
-      <div className="technology">
-        <img src="img/mongodb.png" alt="mongodb" />
-        <h2 className="technology-heading">MongoDB</h2>
-      </div>
-      <div className="technology">
-        <img src="img/postgres.png" alt="postgres" />
-        <h2 className="technology-heading">Postgres</h2>
-      </div>
-      <div className="technology">
-        <img src="img/docker.png" alt="docker" />
-        <h2 className="technology-heading">Docker</h2>
-      </div>
     </div>
   </TechnologiesSection>
 );
