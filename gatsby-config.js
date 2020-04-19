@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true, // Enable tailwindcss support
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
