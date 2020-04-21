@@ -1,4 +1,5 @@
 /* Position and sizing of burger button */
+/* purgecss ignore */
 .bm-burger-button {
   position: fixed;
   width: 42px;
@@ -6,22 +7,26 @@
   left: 36px;
   top: 36px;
 }
+/* purgecss ignore */
 @media (min-width: 60.1em) {
   .bm-burger-button {
     display: none;
   }   
 }
 /* Color/shape of burger icon bars */
+/* purgecss ignore */
 .bm-burger-bars {
   background: rgb(0, 0, 0);
 }
 
 /* Color/shape of close button cross */
+/* purgecss ignore */
 .bm-cross {
   background: #bdc3c7;
 }
 
 /* General sidebar styles */
+/* purgecss ignore */
 .bm-menu {
   background: #5E2CA5;
   padding: 2.5em 1.5em 0;
@@ -29,12 +34,14 @@
 }
 
 /* Morph shape necessary with bubble or elastic */
+/* purgecss ignore */
 .bm-morph-shape {
   fill: #373a47;
 }
 
 
 /* Styling of overlay */
+/* purgecss ignore */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
