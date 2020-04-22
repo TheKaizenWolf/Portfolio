@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
       <Header />
       <Inner>{children}</Inner>
       <Footer>
-        <h1>Copyright © 2019 Raul Saavedra. All rights reserved. </h1>
+        <h1>All content © Raul Saavedra</h1>
       </Footer>
     </div>
   );
