@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { FaLinkedinIn } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
 import Image from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -52,8 +52,8 @@ const Hero = () => {
           <h1 className="heading">I Am A Frontend Engineer</h1>
         </div>
         <div className="flex justify-center">
-          <a href="https://www.linkedin.com/in/raul-s-3138a6153/">
-            <FaLinkedinIn className="icons lg:mr-4" />
+          <a href="https://twitter.com/TheKaizenWolf">
+            <FaTwitter className="icons lg:mr-4" />
           </a>
           <a href="https://github.com/TheKaizenWolf">
             <GoMarkGithub className="icons" />
