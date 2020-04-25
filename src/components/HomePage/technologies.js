@@ -66,21 +66,17 @@ const Technologies = () => (
         <h2 className="technology-heading">React</h2>
       </div>
       <div className="technology">
-        <img src="img/typescript.png" alt="typescript" />
-        <h2 className="technology-heading">Typescript</h2>
-      </div>
-      <div className="technology">
-        <img src="img/apollo.png" alt="apollo" />
-        <h2 className="technology-heading">Apollo</h2>
-      </div>
-      <div className="technology">
-        <img src="img/nodejs.png" alt="nodejs" />
-        <h2 className="technology-heading">Nodejs</h2>
+        <img src="img/gatsby.png" alt="typescript" />
+        <h2 className="technology-heading">Gatsby</h2>
       </div>
       <div className="technology">
         <img src="img/graphql.png" alt="graphql" />
         <h2 className="technology-heading">GraphQL</h2>
       </div>
+      <div className="technology">
+        <img src="img/lambda.png" alt="typescript" />
+        <h2 className="technology-heading">AWS Lambda</h2>
+      </div> 
     </div>
   </TechnologiesSection>
 );
