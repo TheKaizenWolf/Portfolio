@@ -49,7 +49,7 @@ const Hero = () => {
     <StyledHeroContainer>
       <div className="left-section animated bounceInLeft">
         <div className="flex justify-center">
-          <h1 className="heading">I Am A Frontend Engineer</h1>
+          <h1 className="heading">I Am A Frontend Developer</h1>
         </div>
         <div className="flex justify-center">
           <a href="https://twitter.com/TheKaizenWolf">
