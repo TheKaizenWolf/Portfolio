@@ -64,7 +64,7 @@ const Services = () => (
       <FaDesktop className="row-icon" />
       <FaDev className="row-icon" />
       <p className="row-text">
-        I build projects with a great focus on{' '}
+        I build software with a great focus on{' '}
         <a href="" className="purple-link">
           scalability
         </a>{' '}
@@ -73,21 +73,17 @@ const Services = () => (
       </p>
     </div>
     <div className="row-container">
-      <h1 className="row-heading">Communication</h1>
+      <h1 className="row-heading">UI & UX Design</h1>
       <FaCommentDots className="row-icon" />
       <FaCheckCircle className="row-icon" />
       <p className="row-text">
-        <a className="purple-link">Communication is the most important </a> part
-        of a project. We will use
-        <a href="https://trello.com/en" className="red-link">
-          {' '}
-          Todoist
+        Every project{' '}
+        <a href="" className="purple-link">
+          must
         </a>{' '}
-        and{' '}
-        <a href="https://slack.com/intl/en-cl/" className="green-link">
-          Slack
-        </a>{' '}
-        in order to communicate effectively.
+        start with an amazing design. I will make sure my work
+        <a className="purple-link"> represents </a>
+        your business.
       </p>
     </div>
     <div className="row-container">
@@ -96,7 +92,7 @@ const Services = () => (
       <FaCoins className="row-icon" />
       <p className="row-text">
         <a className="light-purple no-underline">
-          I charge by value-based pricing.
+          <a className="purple-link">I charge by value-based pricing. </a>
         </a>{' '}
         The services I provide are priced by the success I bring to your
         business.
