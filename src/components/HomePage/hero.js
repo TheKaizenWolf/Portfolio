@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { FaTwitter } from 'react-icons/fa';
-import { GoMarkGithub } from 'react-icons/go';
+import { GoMarkGithub, GoMail } from 'react-icons/go';
 import Image from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -57,6 +57,9 @@ const Hero = () => {
           </a>
           <a href="https://github.com/TheKaizenWolf">
             <GoMarkGithub className="icons" />
+          </a>
+          <a href="mailto:raul670saavedra@gmail.com">
+            <GoMail className="icons" />
           </a>
         </div>
       </div>
