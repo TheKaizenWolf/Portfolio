@@ -56,7 +56,7 @@ const Hero = () => {
             <FaTwitter className="icons lg:mr-4" />
           </a>
           <a href="https://github.com/TheKaizenWolf">
-            <GoMarkGithub className="icons" />
+            <GoMarkGithub className="icons lg:mr-4" />
           </a>
           <a href="mailto:raul670saavedra@gmail.com">
             <GoMail className="icons" />
