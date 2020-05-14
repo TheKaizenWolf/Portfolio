@@ -50,13 +50,13 @@ const Projects = () => (
     </div>
     <div className="projects">
       <div className="project">
-        <h1 className="project-heading">Raulfits</h1>
-        <a href="https://raulfits-next-prod.herokuapp.com/">
+        <h1 className="project-heading">Sick-Fits</h1>
+        <a href="https://sickfits-nextjs-prod.herokuapp.com">
           <img
             className="image"
             loading="lazy"
-            src="img/rafits.png"
-            alt="raulfits"
+            src="img/sickfits.png"
+            alt="sickfits"
           />
         </a>
         <div className="project-text-div">
