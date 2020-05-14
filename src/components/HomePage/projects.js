@@ -102,7 +102,7 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Roboamigos</h1>
-        <a href="https://thekaizenwolf.github.io/roboamigos/">
+        <a href="https://github.com/TheKaizenWolf/roboamigos">
           <img
             className="image"
             loading="lazy"
