@@ -102,10 +102,6 @@ const Technologies = () => (
           <h2 className="technology-heading">Gatsby</h2>
         </div>
         <div className="technology">
-          <img src="img/next.png" alt="next" />
-          <h2 className="technology-heading">Next.js</h2>
-        </div>
-        <div className="technology">
           <img src="img/graphql.png" alt="graphql" />
           <h2 className="technology-heading">GraphQL</h2>
         </div>
