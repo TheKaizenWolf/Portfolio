@@ -85,7 +85,7 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Face-App</h1>
-        <a href="https://github.com/TheKaizenWolf/face-recognition-app">
+        <a href="https://github.com/raulsaavedra/face-recognition-app">
           <img
             className="image"
             loading="lazy"
@@ -102,7 +102,7 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Roboamigos</h1>
-        <a href="https://github.com/TheKaizenWolf/roboamigos">
+        <a href="https://github.com/raulsaavedra/roboamigos">
           <img
             className="image"
             loading="lazy"
@@ -119,7 +119,7 @@ const Projects = () => (
       </div>
       <div className="project">
         <h1 className="project-heading">Hacker News</h1>
-        <a href="https://github.com/TheKaizenWolf/hacker-full-clone">
+        <a href="https://github.com/raulsaavedra/hacker-full-clone">
           <img
             className="image"
             loading="lazy"

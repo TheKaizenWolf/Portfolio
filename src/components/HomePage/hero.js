@@ -52,10 +52,10 @@ const Hero = () => {
           <h1 className="heading">I Am A Frontend Developer</h1>
         </div>
         <div className="flex justify-center">
-          <a href="https://twitter.com/TheKaizenWolf">
+          <a href="https://twitter.com/raulsaavedra">
             <FaTwitter className="icons lg:mr-4" />
           </a>
-          <a href="https://github.com/TheKaizenWolf">
+          <a href="https://github.com/raulsaavedra">
             <GoMarkGithub className="icons lg:mr-4" />
           </a>
           <a href="mailto:raul670saavedra@gmail.com">
