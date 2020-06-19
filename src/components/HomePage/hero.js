@@ -11,10 +11,32 @@ const StyledHeroContainer = styled.div.attrs({
 })`
   height: 67vh;
   overflow: hidden;
-
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
   .heading {
     ${tw`text-5xl font-bold px-2 text-white mb-4`}
     font-family: 'Proxima Nova Black';
+    @media screen and (min-width: 60rem) {
+      border-right: 0.15em solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
   }
   .left-section {
     ${tw`flex flex-col rounded-full bg-purple-800 p-8 py-12`}
