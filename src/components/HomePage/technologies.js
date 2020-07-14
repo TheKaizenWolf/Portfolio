@@ -102,12 +102,16 @@ const Technologies = () => (
           <h2 className="technology-heading">Gatsby</h2>
         </div>
         <div className="technology">
-          <img src="img/graphql.png" alt="graphql" />
-          <h2 className="technology-heading">GraphQL</h2>
+          <img src="img/next.png" alt="nextjs" />
+          <h2 className="technology-heading">Next.js</h2>
         </div>
         <div className="technology">
-          <img src="img/lambda.png" alt="aws lambda" />
-          <h2 className="technology-heading">AWS Lambda</h2>
+          <img src="img/expo.png" alt="expo" />
+          <h2 className="technology-heading">Expo</h2>
+        </div>
+        <div className="technology">
+          <img src="img/graphql.png" alt="graphql" />
+          <h2 className="technology-heading">GraphQL</h2>
         </div>
       </div>
     </div>
