@@ -10,14 +10,26 @@ export const Container = styled('div', {
         maxWidth: '640px',
       },
       medium: {
-        maxWidth: '960px',
+        maxWidth: '1020px',
       },
       large: {
-        maxWidth: '1280px',
+        maxWidth: '1200px',
       },
       extraLarge: {
         maxWidth: '1440px',
       },
     },
   },
+});
+
+export const SBox = styled('div', {
+  position: 'relative',
+});
+
+export const SFlex = styled('div', {
+  display: 'flex',
+});
+
+export const SGrid = styled('div', {
+  display: 'grid',
 });
