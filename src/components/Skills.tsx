@@ -48,6 +48,10 @@ export default function Skills({ skills }) {
     const date = new Date();
     return new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
   };
+  const getCurrentYear = () => {
+    const date = new Date();
+    return new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(date);
+  };
   return (
     <div>
       <SGrid
@@ -78,7 +82,10 @@ export default function Skills({ skills }) {
         </SProgressBarList>
         <SParagraph>
           This is my updated skills section as{' '}
-          <strong>{getCurrentMonth()}.</strong> <br /> I am a follower of the
+          <strong>
+            {getCurrentMonth()}, {getCurrentYear()}.
+          </strong>{' '}
+          <br /> I am a follower of the
           <strong> Kaizen 改善</strong> philosophy, which means continuous
           improvement. Therefore, you will see this list keep improving over
           time!
