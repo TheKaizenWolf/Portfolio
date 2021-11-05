@@ -16,7 +16,6 @@ import Layout from '../components/Layout';
 import { styled } from '../stitches';
 import Skills from '../components/Skills';
 import { SButton } from '../components/base/styles/Button';
-import { downloadCV } from '../downloadcv';
 
 const SHero = styled('div', {
   display: 'grid',
