@@ -10,6 +10,10 @@ const SHeader = styled('header', {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: '20px 0px',
+  '@bpLg': {
+    flexDirection: 'column',
+    gap: '20px',
+  },
 });
 const SHeaderLinks = styled('div', {
   display: 'flex',
@@ -22,18 +26,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     {
       name: 'Home',
       path: '/',
-    },
-    {
-      name: 'Blog',
-      path: '/blog',
-    },
-    {
-      name: 'About',
-      path: '/about',
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
     },
   ];
 

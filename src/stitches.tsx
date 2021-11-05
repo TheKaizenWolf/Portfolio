@@ -7,7 +7,8 @@ export const { styled, css, keyframes, globalCss } = createStitches({
       redDark: 'hsl(338, 100%, 44%)',
       grayLight: 'hsl(226, 70%, 90%)',
       grayMedium: 'hsl(225, 20%, 70%)',
-      grayDark: 'hsl(216, 65%, 9%)',
+      grayDarker: 'hsl(218, 38%, 15%)',
+      grayDarkest: 'hsl(216, 65%, 9%)',
     },
     fontSizes: {
       xs: '0.75rem',
@@ -24,5 +25,8 @@ export const { styled, css, keyframes, globalCss } = createStitches({
       '8xl': '6rem',
       '9xl': '8rem',
     },
+  },
+  media: {
+    bpLg: '(max-width: 1024px)',
   },
 });

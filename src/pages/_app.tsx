@@ -13,7 +13,7 @@ const globalStyles = globalCss({
     fontFamily: '"Open Sans", sans-serif',
   },
   'html, body': {
-    backgroundColor: '$grayDark',
+    backgroundColor: '$grayDarkest',
     color: '$grayLight',
   },
   a: {

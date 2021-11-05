@@ -3,13 +3,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '@react-hook/media-query';
 import { blinkCaret, typing } from '../components/base/styles/Animations';
-import {
-  Container,
-  SBox,
-  SFlex,
-  SGrid,
-} from '../components/base/styles/Layout';
+import { Container, SFlex } from '../components/base/styles/Layout';
 import {
   SHeadingPrimary,
   SHeadingTertiary,
@@ -17,6 +13,7 @@ import {
 } from '../components/base/styles/Typography';
 import Layout from '../components/Layout';
 import { styled } from '../stitches';
+import Skills from '../components/Skills';
 
 const SHero = styled('div', {
   display: 'grid',
@@ -25,7 +22,10 @@ const SHero = styled('div', {
   gap: '10px',
   alignItems: 'center',
   overflow: 'hidden',
-  marginBottom: '250px',
+  '@bpLg': {
+    paddingTop: '100px',
+    gridTemplateColumns: '1fr',
+  },
   '> div': {
     display: 'grid',
     gap: '30px',
@@ -38,15 +38,63 @@ const SAbout = styled('div', {
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   alignItems: 'center',
-  marginBottom: '200px',
+  gap: '30px',
+  '@bpLg': {
+    gridTemplateColumns: '1fr',
+  },
 });
 const Home: NextPage = () => {
   const [aboutRef, aboutInView] = useInView({
-    threshold: 0.75,
+    threshold: 0.5,
+    triggerOnce: true,
   });
+  const isMobile = useMediaQuery('only screen and (max-width: 1024px)');
+  const skills = [
+    {
+      name: 'JavaScript',
+      percentage: '70%',
+      image: '/technologies/javascript.png',
+    },
+    {
+      name: 'TypeScript',
+      percentage: '60%',
+      image: '/technologies/typescript.png',
+    },
+    {
+      name: 'React',
+      percentage: '75%',
+      image: '/technologies/react.png',
+    },
+    {
+      name: 'Next.js',
+      percentage: '80%',
+      image: '/technologies/nextjs.png',
+    },
+    {
+      name: 'Styled Components',
+      percentage: '85%',
+      image: '/technologies/styled-components.png',
+    },
+    {
+      name: 'Node.js',
+      percentage: '60%',
+      image: '/technologies/node.png',
+    },
+    {
+      name: 'GraphQL',
+      percentage: '50%',
+      image: '/technologies/graphql.png',
+    },
+  ];
   return (
     <Layout>
-      <Container size="large">
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Container
+        size="large"
+        css={{ marginBottom: '250px', '@bpLg': { marginBottom: '150px' } }}
+      >
         <SHero>
           <motion.div
             initial={{ opacity: 0 }}
@@ -63,6 +111,12 @@ const Home: NextPage = () => {
                 animation: `${typing} 1.5s steps(80, end), ${blinkCaret} 0.75s step-end infinite`,
                 animationFillMode: 'backwards',
                 animationDelay: '0.7s',
+                '@bpLg': {
+                  animation: 'none',
+                  overflow: 'visible',
+                  whiteSpace: 'normal',
+                  borderRight: 'none',
+                },
               }}
             >
               I am a Frontend Developer
@@ -70,7 +124,7 @@ const Home: NextPage = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2.1, duration: 0.75 }}
+              transition={{ delay: isMobile ? 0 : 2.3, duration: 0.75 }}
             >
               <SParagraph css={{ maxWidth: '500px', marginBottom: '30px' }}>
                 I specialize in the <strong>Javascript</strong> ecosystem. My
@@ -103,15 +157,22 @@ const Home: NextPage = () => {
             </motion.div>
           </motion.div>
           <motion.div
-            initial={{ x: 20, opacity: 0 }}
-            animate={{ x: -40, opacity: 1 }}
+            initial={{ x: isMobile ? 0 : 20, opacity: 0 }}
+            animate={{
+              x: isMobile ? 0 : -40,
+              y: isMobile ? -30 : 0,
+              opacity: 1,
+            }}
             transition={{ duration: 0.75 }}
           >
             <Image width="200px" height="350px" src="/coding.svg" />
           </motion.div>
         </SHero>
       </Container>
-      <Container size="medium">
+      <Container
+        size="medium"
+        css={{ marginBottom: '250px', '@bpLg': { marginBottom: '150px' } }}
+      >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: aboutInView ? 1 : 0 }}
@@ -141,19 +202,25 @@ const Home: NextPage = () => {
                   justifyContent: 'center',
                   position: 'relative',
                   '.normal': {
-                    width: '350px',
+                    maxWidth: '350px',
                     height: 'auto',
                     overflow: 'hidden',
                     borderRadius: '20px',
                     position: 'relative',
+                    '@bpLg': {
+                      maxWidth: '300px',
+                    },
                   },
                   '.absolute': {
                     position: 'absolute',
                     top: '0',
                     left: '0',
-                    width: '350px',
+                    maxWidth: '350px',
                     transform: 'translateX(20%)',
                     filter: 'blur(150px)',
+                    '@bpLg': {
+                      display: 'none',
+                    },
                   },
                 }}
               >
@@ -163,6 +230,12 @@ const Home: NextPage = () => {
             </div>
           </SAbout>
         </motion.div>
+      </Container>
+      <Container size="medium" css={{ marginBottom: '100px' }}>
+        <SHeadingTertiary css={{ marginBottom: '20px' }}>
+          My Skills
+        </SHeadingTertiary>
+        <Skills skills={skills} />
       </Container>
     </Layout>
   );
