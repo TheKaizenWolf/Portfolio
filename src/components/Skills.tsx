@@ -39,7 +39,17 @@ const SProgressBar = styled('div', {
   },
 });
 
-export default function Skills({ skills }) {
+interface Skill {
+  name: string;
+  percentage: string;
+  image: string;
+}
+
+interface skillsProps {
+  skills: Skill[];
+}
+
+export default function Skills({ skills }: skillsProps) {
   const [skillsRef, skillsInView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
