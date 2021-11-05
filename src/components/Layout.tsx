@@ -32,6 +32,7 @@ const SFooter = styled('footer', {
     margin: '0 auto',
     maxWidth: '$medium',
     width: '100%',
+    gap: '10px',
   },
   '@bpLg': {
     flexDirection: 'column',
