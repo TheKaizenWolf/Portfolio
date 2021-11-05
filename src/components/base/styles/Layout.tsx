@@ -1,22 +1,24 @@
 import { styled } from '../../../stitches';
 
 export const Container = styled('div', {
-  maxWidth: '1280px',
   margin: '0 auto',
   padding: '0px 20px',
+  defaultVariants: {
+    size: 'large',
+  },
   variants: {
     size: {
       small: {
-        maxWidth: '640px',
+        maxWidth: '$small',
       },
       medium: {
-        maxWidth: '1020px',
+        maxWidth: '$medium',
       },
       large: {
-        maxWidth: '1200px',
+        maxWidth: '$large',
       },
       extraLarge: {
-        maxWidth: '1440px',
+        maxWidth: '$extralarge',
       },
     },
   },

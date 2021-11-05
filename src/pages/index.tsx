@@ -7,6 +7,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 import { blinkCaret, typing } from '../components/base/styles/Animations';
 import { Container, SFlex } from '../components/base/styles/Layout';
 import {
+  SButtonText,
   SHeadingPrimary,
   SHeadingTertiary,
   SParagraph,
@@ -14,6 +15,8 @@ import {
 import Layout from '../components/Layout';
 import { styled } from '../stitches';
 import Skills from '../components/Skills';
+import { SButton } from '../components/base/styles/Button';
+import { downloadCV } from '../downloadcv';
 
 const SHero = styled('div', {
   display: 'grid',
@@ -236,6 +239,16 @@ const Home: NextPage = () => {
           My Skills
         </SHeadingTertiary>
         <Skills skills={skills} />
+      </Container>
+      <Container
+        size="medium"
+        css={{ marginBottom: '150px', '@bpLg': { marginBottom: '50px' } }}
+      >
+        <SFlex css={{ justifyContent: 'center' }}>
+          <SButton as="a" href="/cv.pdf" download>
+            <SButtonText>Download CV</SButtonText>
+          </SButton>
+        </SFlex>
       </Container>
     </Layout>
   );

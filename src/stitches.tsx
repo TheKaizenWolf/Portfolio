@@ -25,6 +25,12 @@ export const { styled, css, keyframes, globalCss } = createStitches({
       '8xl': '6rem',
       '9xl': '8rem',
     },
+    sizes: {
+      small: '640px',
+      medium: '1020px',
+      large: '1200px',
+      extraLarge: '1440px',
+    },
   },
   media: {
     bpLg: '(max-width: 1024px)',

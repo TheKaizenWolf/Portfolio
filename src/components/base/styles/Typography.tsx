@@ -9,6 +9,13 @@ export const SHeadingTertiary = styled('h3', {
   fontSize: '$3xl',
   fontWeight: '700',
 });
+export const SButtonText = styled('span', {
+  fontSize: '$lg',
+  fontWeight: '700',
+  lineHeight: '1.8',
+  letterSpacing: '0.05em',
+  color: 'white',
+});
 export const SParagraph = styled('p', {
   fontSize: '$lg',
   fontWeight: '400',
