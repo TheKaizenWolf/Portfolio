@@ -73,6 +73,16 @@ const Home: NextPage = () => {
       image: '/technologies/nextjs.png',
     },
     {
+      name: 'React Native',
+      percentage: '60%',
+      image: '/technologies/react.png',
+    },
+    {
+      name: 'Expo',
+      percentage: '50%',
+      image: '/technologies/expo.png',
+    },
+    {
       name: 'Styled Components',
       percentage: '85%',
       image: '/technologies/styled-components.png',
