@@ -24,7 +24,7 @@ const SHero = styled('div', {
   gap: '10px',
   alignItems: 'center',
   overflow: 'hidden',
-  '@bpLg': {
+  '@bpMd': {
     paddingTop: '100px',
     gridTemplateColumns: '1fr',
   },
@@ -41,7 +41,7 @@ const SAbout = styled('div', {
   gridTemplateColumns: '1fr 1fr',
   alignItems: 'center',
   gap: '30px',
-  '@bpLg': {
+  '@bpMd': {
     gridTemplateColumns: '1fr',
   },
 });
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
       </Head>
       <Container
         size="large"
-        css={{ marginBottom: '250px', '@bpLg': { marginBottom: '150px' } }}
+        css={{ marginBottom: '250px', '@bpMd': { marginBottom: '150px' } }}
       >
         <SHero>
           <motion.div
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
                 animation: `${typing} 1.5s steps(80, end), ${blinkCaret} 0.75s step-end infinite`,
                 animationFillMode: 'backwards',
                 animationDelay: '0.7s',
-                '@bpLg': {
+                '@bpMd': {
                   animation: 'none',
                   overflow: 'visible',
                   whiteSpace: 'normal',
@@ -193,7 +193,7 @@ const Home: NextPage = () => {
       </Container>
       <Container
         size="medium"
-        css={{ marginBottom: '250px', '@bpLg': { marginBottom: '150px' } }}
+        css={{ marginBottom: '250px', '@bpMd': { marginBottom: '150px' } }}
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -229,8 +229,11 @@ const Home: NextPage = () => {
                     overflow: 'hidden',
                     borderRadius: '20px',
                     position: 'relative',
-                    '@bpLg': {
+                    '@bpMd': {
                       maxWidth: '300px',
+                    },
+                    '@bpExSm': {
+                      maxWidth: '250px',
                     },
                   },
                   '.absolute': {
@@ -240,7 +243,7 @@ const Home: NextPage = () => {
                     maxWidth: '350px',
                     transform: 'translateX(20%)',
                     filter: 'blur(150px)',
-                    '@bpLg': {
+                    '@bpMd': {
                       display: 'none',
                     },
                   },
@@ -254,14 +257,14 @@ const Home: NextPage = () => {
         </motion.div>
       </Container>
       <Container size="medium" css={{ marginBottom: '100px' }}>
-        <SHeadingTertiary css={{ marginBottom: '20px' }}>
+        <SHeadingTertiary css={{ marginBottom: '25px' }}>
           My Skills
         </SHeadingTertiary>
         <Skills skills={skills} />
       </Container>
       <Container
         size="medium"
-        css={{ marginBottom: '150px', '@bpLg': { marginBottom: '50px' } }}
+        css={{ marginBottom: '150px', '@bpMd': { marginBottom: '50px' } }}
       >
         <SFlex css={{ justifyContent: 'center' }}>
           <SButton as="a" href="/cv.pdf" download>

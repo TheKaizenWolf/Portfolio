@@ -10,7 +10,7 @@ const SHeader = styled('header', {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: '20px 0px',
-  '@bpLg': {
+  '@bpMd': {
     flexDirection: 'column',
     gap: '20px',
   },
@@ -33,8 +33,12 @@ const SFooter = styled('footer', {
     maxWidth: '$medium',
     width: '100%',
     gap: '10px',
+    '@bpMd': {
+      flexDirection: 'column',
+      gap: '20px',
+    },
   },
-  '@bpLg': {
+  '@bpMd': {
     flexDirection: 'column',
     gap: '20px',
   },

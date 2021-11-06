@@ -27,6 +27,7 @@ export const { styled, css, keyframes, globalCss, getCssText } = createStitches(
         '9xl': '8rem',
       },
       sizes: {
+        extraSmall: '425px',
         small: '640px',
         medium: '1020px',
         large: '1200px',
@@ -34,7 +35,9 @@ export const { styled, css, keyframes, globalCss, getCssText } = createStitches(
       },
     },
     media: {
-      bpLg: '(max-width: 1024px)',
+      bpMd: '(max-width: 1024px)',
+      bpSm: '(max-width: 640px)',
+      bpExSm: '(max-width: 425px)',
     },
   }
 );

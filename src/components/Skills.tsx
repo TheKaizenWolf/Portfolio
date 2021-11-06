@@ -13,6 +13,12 @@ const SParrot = styled('div', {
     width: '25px',
     height: '25px',
   },
+  '@bpExSm': {
+    img: {
+      width: '20px',
+      height: '20px',
+    },
+  },
 });
 const SProgressBarList = styled('div', {
   display: 'grid',
@@ -79,7 +85,7 @@ export default function Skills({ skills }: skillsProps) {
           gridTemplateColumns: '1fr 1fr',
           alignItems: 'center',
           gap: '40px',
-          '@bpLg': {
+          '@bpMd': {
             gridTemplateColumns: '1fr',
           },
         }}
@@ -93,10 +99,7 @@ export default function Skills({ skills }: skillsProps) {
             }}
           >
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
-              <SText css={{ color: '$redMedium' }}>|</SText>
-            </SFlex>
-            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
-              <SText>Beginner </SText>
+              <SText css={{ '@bpExSm': { fontSize: '$xs' } }}>Beginner </SText>
               <SParrot>
                 <img src="/technologies/parrot.gif" />
               </SParrot>
@@ -105,7 +108,9 @@ export default function Skills({ skills }: skillsProps) {
               <SText css={{ color: '$redMedium' }}>|</SText>
             </SFlex>
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
-              <SText>Intermediate </SText>
+              <SText css={{ '@bpExSm': { fontSize: '$xs' } }}>
+                Intermediate{' '}
+              </SText>
               <SParrot>
                 <img src="/technologies/fastparrot.gif" />
               </SParrot>
@@ -114,13 +119,10 @@ export default function Skills({ skills }: skillsProps) {
               <SText css={{ color: '$redMedium' }}>|</SText>
             </SFlex>
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
-              <SText>Advanced </SText>
+              <SText css={{ '@bpExSm': { fontSize: '$xs' } }}>Advanced </SText>
               <SParrot>
                 <img src="/technologies/hyperfastparrot.gif" />
               </SParrot>
-            </SFlex>
-            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
-              <SText css={{ color: '$redMedium' }}>|</SText>
             </SFlex>
           </SFlex>
           <SProgressBarList ref={skillsRef}>
