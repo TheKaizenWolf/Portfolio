@@ -24,6 +24,11 @@ export const SParagraph = styled('p', {
     color: '$redMedium',
   },
 });
+export const SText = styled('span', {
+  fontSize: '$md',
+  fontWeight: '400',
+});
+
 export const SLink = styled('a', {
   fontSize: '$md',
   borderBottom: '2px solid transparent',

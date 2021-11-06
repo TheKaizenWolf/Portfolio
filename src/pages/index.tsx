@@ -53,8 +53,18 @@ const Home: NextPage = () => {
   const isMobile = useMediaQuery('only screen and (max-width: 1024px)');
   const skills = [
     {
+      name: 'HTML',
+      percentage: '85%',
+      image: '/technologies/html.png',
+    },
+    {
+      name: 'CSS (with Flex and Grid)',
+      percentage: '85%',
+      image: '/technologies/css.png',
+    },
+    {
       name: 'JavaScript',
-      percentage: '70%',
+      percentage: '75%',
       image: '/technologies/javascript.png',
     },
     {
@@ -64,37 +74,37 @@ const Home: NextPage = () => {
     },
     {
       name: 'React',
-      percentage: '75%',
+      percentage: '80%',
       image: '/technologies/react.png',
     },
     {
       name: 'Next.js',
-      percentage: '80%',
+      percentage: '75%',
       image: '/technologies/nextjs.png',
     },
     {
       name: 'React Native',
-      percentage: '60%',
+      percentage: '65%',
       image: '/technologies/react.png',
     },
     {
       name: 'Expo',
-      percentage: '50%',
+      percentage: '55%',
       image: '/technologies/expo.png',
     },
     {
-      name: 'Styled Components',
+      name: 'Styled Components (CSS in JS)',
       percentage: '85%',
       image: '/technologies/styled-components.png',
     },
     {
       name: 'Node.js',
-      percentage: '60%',
+      percentage: '40%',
       image: '/technologies/node.png',
     },
     {
       name: 'GraphQL',
-      percentage: '50%',
+      percentage: '30%',
       image: '/technologies/graphql.png',
     },
   ];

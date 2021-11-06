@@ -1,9 +1,19 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { styled } from '../stitches';
-import { SGrid } from './base/styles/Layout';
-import { SParagraph } from './base/styles/Typography';
+import { SFlex, SGrid } from './base/styles/Layout';
+import { SParagraph, SText } from './base/styles/Typography';
 
+const SParrot = styled('div', {
+  width: '100%',
+  height: '100%',
+  display: 'grid',
+  alignItems: 'center',
+  img: {
+    width: '25px',
+    height: '25px',
+  },
+});
 const SProgressBarList = styled('div', {
   display: 'grid',
   gap: '10px',
@@ -74,32 +84,74 @@ export default function Skills({ skills }: skillsProps) {
           },
         }}
       >
-        <SProgressBarList ref={skillsRef}>
-          {skills.map((skill, index) => (
-            <SProgressBar
-              css={{
-                '&::before': {
-                  width: skillsInView ? skill.percentage : 0,
-                  transitionDelay: `${index * 0.1}s`,
-                },
-              }}
-              key={skill.name}
-            >
-              <img src={skill.image} />
-              <div>{skill.name}</div>
-            </SProgressBar>
-          ))}
-        </SProgressBarList>
-        <SParagraph>
-          This is my updated skills section as{' '}
-          <strong>
-            {getCurrentMonth()}, {getCurrentYear()}.
-          </strong>{' '}
-          <br /> I am a follower of the
-          <strong> Kaizen 改善</strong> philosophy, which means continuous
-          improvement. Therefore, you will see this list keep improving over
-          time!
-        </SParagraph>
+        <div>
+          <SFlex
+            css={{
+              justifyContent: 'space-between',
+              marginBottom: '15px',
+              alignContent: 'center',
+            }}
+          >
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText css={{ color: '$redMedium' }}>|</SText>
+            </SFlex>
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText>Beginner </SText>
+              <SParrot>
+                <img src="/technologies/parrot.gif" />
+              </SParrot>
+            </SFlex>
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText css={{ color: '$redMedium' }}>|</SText>
+            </SFlex>
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText>Intermediate </SText>
+              <SParrot>
+                <img src="/technologies/fastparrot.gif" />
+              </SParrot>
+            </SFlex>
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText css={{ color: '$redMedium' }}>|</SText>
+            </SFlex>
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText>Advanced </SText>
+              <SParrot>
+                <img src="/technologies/hyperfastparrot.gif" />
+              </SParrot>
+            </SFlex>
+            <SFlex css={{ gap: '10px', alignItems: 'center' }}>
+              <SText css={{ color: '$redMedium' }}>|</SText>
+            </SFlex>
+          </SFlex>
+          <SProgressBarList ref={skillsRef}>
+            {skills.map((skill, index) => (
+              <SProgressBar
+                css={{
+                  '&::before': {
+                    width: skillsInView ? skill.percentage : 0,
+                    transitionDelay: `${index * 0.1}s`,
+                  },
+                }}
+                key={skill.name}
+              >
+                <img src={skill.image} />
+                <div>{skill.name}</div>
+              </SProgressBar>
+            ))}
+          </SProgressBarList>
+        </div>
+        <div>
+          <SParagraph>
+            This is my updated skills section as{' '}
+            <strong>
+              {getCurrentMonth()}, {getCurrentYear()}.
+            </strong>{' '}
+            <br /> I am a follower of the
+            <strong> Kaizen 改善</strong> philosophy, which means continuous
+            improvement. Therefore, you will see this list keep improving over
+            time!
+          </SParagraph>
+        </div>
       </SGrid>
     </div>
   );
