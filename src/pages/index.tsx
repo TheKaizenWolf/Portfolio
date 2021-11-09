@@ -83,16 +83,6 @@ const Home: NextPage = () => {
       image: '/technologies/nextjs.png',
     },
     {
-      name: 'React Native',
-      percentage: '65%',
-      image: '/technologies/react.png',
-    },
-    {
-      name: 'Expo',
-      percentage: '55%',
-      image: '/technologies/expo.png',
-    },
-    {
       name: 'Styled Components (CSS in JS)',
       percentage: '85%',
       image: '/technologies/styled-components.png',
@@ -150,8 +140,8 @@ const Home: NextPage = () => {
             >
               <SParagraph css={{ maxWidth: '500px', marginBottom: '30px' }}>
                 I specialize in the <strong>Javascript</strong> ecosystem. My
-                main focus is React with <strong>Next.js</strong> and React
-                Native with <strong>Expo</strong>. I also have worked with
+                main focus is React with <strong>Next.js.</strong> I also have
+                worked with
                 <strong> Node.js, GraphQL and Prisma</strong>.
               </SParagraph>
               <SFlex
