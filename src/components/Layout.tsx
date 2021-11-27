@@ -57,7 +57,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Container>
         <SHeader>
           <SLogo>
-            <img src="/logo2.png" alt="Raul Saavedra" />
+            <img src="/logo.png" alt="Raul Saavedra" />
             Raul Saavedra
           </SLogo>
           <SHeaderLinks>
