@@ -62,8 +62,10 @@ export default class Document extends NextDocument {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
           <style
+            /* eslint-disable react/no-danger */
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
+            /* eslint-enable react/no-danger */
           />
         </Head>
         <body>
