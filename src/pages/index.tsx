@@ -101,7 +101,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Home</title>
+        <title>Raul Saavedra | Home</title>
       </Head>
       <Container
         size="large"

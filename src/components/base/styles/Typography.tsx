@@ -47,6 +47,14 @@ export const SLink = styled('a', {
   },
 });
 export const SLogo = styled('a', {
+  display: 'flex',
+  gap: '15px',
+  alignItems: 'center',
   fontSize: '$2xl',
   fontWeight: '700',
+  lineHeight: '1',
+  img: {
+    width: '40px',
+    borderRadius: '10px',
+  },
 });
