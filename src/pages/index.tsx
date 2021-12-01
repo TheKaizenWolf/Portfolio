@@ -63,7 +63,7 @@ const Home: NextPage = () => {
       image: '/technologies/css.png',
     },
     {
-      name: 'JavaScript',
+      name: 'JavaScript (with ES6)',
       percentage: '75%',
       image: '/technologies/javascript.png',
     },
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
       image: '/technologies/typescript.png',
     },
     {
-      name: 'React',
+      name: 'React (with Hooks)',
       percentage: '80%',
       image: '/technologies/react.png',
     },
