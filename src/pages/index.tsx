@@ -73,7 +73,7 @@ const Home: NextPage = () => {
       image: '/technologies/typescript.png',
     },
     {
-      name: 'React (with Hooks)',
+      name: 'React & React Native (with Hooks)',
       percentage: '80%',
       image: '/technologies/react.png',
     },
@@ -81,6 +81,11 @@ const Home: NextPage = () => {
       name: 'Next.js',
       percentage: '75%',
       image: '/technologies/nextjs.png',
+    },
+    {
+      name: 'Expo',
+      percentage: '75%',
+      image: '/technologies/expo.png',
     },
     {
       name: 'Styled Components (CSS in JS)',
