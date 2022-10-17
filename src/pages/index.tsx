@@ -10,6 +10,7 @@ import {
   SButtonText,
   SHeadingPrimary,
   SHeadingTertiary,
+  SLink,
   SParagraph,
 } from '../components/base/styles/Typography';
 import Layout from '../components/Layout';
@@ -63,43 +64,53 @@ const Home: NextPage = () => {
       image: '/technologies/css.png',
     },
     {
+      name: 'Styled Components (CSS in JS)',
+      percentage: '85%',
+      image: '/technologies/styled-components.png',
+    },
+    {
       name: 'JavaScript (with ES6)',
       percentage: '75%',
       image: '/technologies/javascript.png',
     },
     {
       name: 'TypeScript',
-      percentage: '60%',
+      percentage: '70%',
       image: '/technologies/typescript.png',
     },
     {
-      name: 'React & React Native (with Hooks)',
-      percentage: '80%',
+      name: 'React (with Hooks)',
+      percentage: '85%',
       image: '/technologies/react.png',
     },
     {
       name: 'Next.js',
-      percentage: '75%',
+      percentage: '90%',
       image: '/technologies/nextjs.png',
     },
     {
+      name: 'Sanity.io',
+      percentage: '90%',
+      image: '/technologies/sanity.jpg',
+    },
+    {
+      name: 'React Native',
+      percentage: '60%',
+      image: '/technologies/react.png',
+    },
+    {
       name: 'Expo',
-      percentage: '75%',
+      percentage: '55%',
       image: '/technologies/expo.png',
     },
     {
-      name: 'Styled Components (CSS in JS)',
-      percentage: '85%',
-      image: '/technologies/styled-components.png',
-    },
-    {
       name: 'Node.js',
-      percentage: '40%',
+      percentage: '50%',
       image: '/technologies/node.png',
     },
     {
       name: 'GraphQL',
-      percentage: '30%',
+      percentage: '50%',
       image: '/technologies/graphql.png',
     },
   ];
@@ -145,9 +156,12 @@ const Home: NextPage = () => {
             >
               <SParagraph css={{ maxWidth: '500px', marginBottom: '30px' }}>
                 I specialize in the <strong>Javascript</strong> ecosystem. My
-                main focus is React with <strong>Next.js.</strong> I also have
-                worked with
-                <strong> Node.js, GraphQL and Prisma</strong>.
+                main focus is <SLink href="https://reactjs.org/">React</SLink>,{' '}
+                <SLink href="https://nextjs.org/">Next.js,</SLink> and the
+                headless CMS{' '}
+                <SLink href="https://www.sanity.io/">Sanity.io</SLink>. <br /> I
+                also have worked with
+                <strong> Node.js and GraphQL</strong>.
               </SParagraph>
               <SFlex
                 css={{
@@ -203,10 +217,12 @@ const Home: NextPage = () => {
               <SParagraph>
                 <strong>I am Raul Saavedra</strong>, and I currently live in
                 Santiago, Chile. I have a passion for building user interfaces
-                that are captivating, performant, and accessible. I am currently
-                working as a Frontend Developer at MEAT, where I have worked on
-                projects for clients such as{' '}
-                <strong>GAC Motor, Sinotruk, Komatsu, and PC Factory.</strong>
+                that are captivating, performant, and accessible.
+                <br />I am currently working as a Frontend Developer at Xepelin,
+                where I develop and mantain the current{' '}
+                <SLink href="https://xepelin.com">Website</SLink>,{' '}
+                <SLink href="https://xepelin.com/blog">Blog</SLink> and{' '}
+                <SLink href="https://xepelin.com/newsroom">Newsroom</SLink>.
                 <br />
                 <br />
                 <strong>In my free time</strong>, I love to practice martial

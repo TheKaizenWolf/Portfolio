@@ -30,11 +30,13 @@ export const SText = styled('span', {
 });
 
 export const SLink = styled('a', {
-  fontSize: '$md',
+  fontSize: '$lg',
   borderBottom: '2px solid transparent',
   paddingBottom: '5px',
   letterSpacing: '0.05em',
   transition: 'all 0.4s ease',
+  color: '$redMedium',
+  fontWeight: 'bold',
   '&:hover': {
     borderBottom: '2px solid $redMedium',
   },

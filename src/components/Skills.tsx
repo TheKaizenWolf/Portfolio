@@ -47,7 +47,7 @@ const SProgressBar = styled('div', {
     left: '0',
     width: '100%',
     height: '100%',
-    backgroundColor: '$redDark',
+    backgroundColor: '$redDarker',
     transition: 'all 1s ease',
     borderRight: '8px solid $redMedium',
     borderTopRightRadius: '6px',
