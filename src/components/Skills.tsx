@@ -101,7 +101,7 @@ export default function Skills({ skills }: skillsProps) {
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
               <SText css={{ '@bpExSm': { fontSize: '$xs' } }}>Beginner </SText>
               <SParrot>
-                <img src="/technologies/parrot.gif" />
+                <img alt="Parrot" src="/technologies/parrot.gif" />
               </SParrot>
             </SFlex>
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
@@ -112,7 +112,7 @@ export default function Skills({ skills }: skillsProps) {
                 Intermediate{' '}
               </SText>
               <SParrot>
-                <img src="/technologies/fastparrot.gif" />
+                <img alt="Parrot" src="/technologies/fastparrot.gif" />
               </SParrot>
             </SFlex>
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
@@ -121,7 +121,7 @@ export default function Skills({ skills }: skillsProps) {
             <SFlex css={{ gap: '10px', alignItems: 'center' }}>
               <SText css={{ '@bpExSm': { fontSize: '$xs' } }}>Advanced </SText>
               <SParrot>
-                <img src="/technologies/hyperfastparrot.gif" />
+                <img alt="Parrot" src="/technologies/hyperfastparrot.gif" />
               </SParrot>
             </SFlex>
           </SFlex>
@@ -136,7 +136,7 @@ export default function Skills({ skills }: skillsProps) {
                 }}
                 key={skill.name}
               >
-                <img src={skill.image} />
+                <img alt={skill.name} src={skill.image} />
                 <div>{skill.name}</div>
               </SProgressBar>
             ))}

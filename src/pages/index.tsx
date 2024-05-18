@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useMediaQuery } from '@react-hook/media-query';
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
             }}
             transition={{ duration: 0.75 }}
           >
-            <Image width="200px" height="350px" src="/coding.svg" />
+            <Image width="200" height="350" src="/coding.svg" />
           </motion.div>
         </SHero>
       </Container>
@@ -260,8 +260,8 @@ const Home: NextPage = () => {
                   },
                 }}
               >
-                <img className="absolute" src="/me.jpeg" />
-                <img className="normal" src="/me.jpeg" />
+                <img alt="Raul Saavedra" className="absolute" src="/me.jpeg" />
+                <img alt="Raul Saavedra" className="normal" src="/me.jpeg" />
               </SFlex>
             </div>
           </SAbout>
