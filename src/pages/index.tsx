@@ -216,7 +216,7 @@ const Home: NextPage = () => {
               </SHeadingTertiary>
               <SParagraph>
                 <strong>I am Raul Saavedra</strong>, and I currently live in
-                Santiago, Chile. I have a passion for building user interfaces
+                Columbus, OH. I have a passion for building user interfaces
                 that are captivating, performant, and accessible.
                 <br />I am currently working as a Frontend Developer at Xepelin,
                 where I develop and mantain the current{' '}
