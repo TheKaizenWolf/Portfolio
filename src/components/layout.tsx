@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Container } from "./base/styles/layout";
-import { SLink, SLogo, SParagraph } from "./base/styles/typography";
+import { Container } from "./base/styles/Layout";
+import { SLink, SLogo, SParagraph } from "./base/styles/Typography";
 import { usePathname } from "next/navigation";
 import styled, { createGlobalStyle } from "styled-components";
 

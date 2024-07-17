@@ -4,19 +4,19 @@ import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "@react-hook/media-query";
-import { Container, SFlex } from "../src/components/base/styles/layout";
+import { Container, SFlex } from "../src/components/base/styles/Layout";
 import {
   SButtonText,
   SHeadingPrimary,
   SHeadingTertiary,
   SLink,
   SParagraph,
-} from "../src/components/base/styles/typography";
-import Layout from "../src/components/layout";
-import Skills from "../src/components/skills";
-import { SButton } from "../src/components/base/styles/button";
+} from "../src/components/base/styles/Typography";
+import Layout from "../src/components/Layout";
+import Skills from "../src/components/Skills";
+import { SButton } from "../src/components/base/styles/Button";
 import styled, { keyframes } from "styled-components";
-import { blinkCaret, typing } from "src/components/base/styles/animations";
+import { blinkCaret, typing } from "src/components/base/styles/Animations";
 
 const SHero = styled.div`
   display: grid;
