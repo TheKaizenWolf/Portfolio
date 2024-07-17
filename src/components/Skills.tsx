@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import { SFlex, SGrid } from "./base/styles/layout";
-import { SParagraph, SText } from "./base/styles/typography";
+import { SFlex, SGrid } from "./base/styles/Layout";
+import { SParagraph, SText } from "./base/styles/Typography";
 import styled, { css } from "styled-components";
 
 const SParrot = styled.div`
