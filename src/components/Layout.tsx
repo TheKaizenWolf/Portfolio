@@ -1,59 +1,94 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/dist/client/router';
-import { styled } from '../stitches';
-import { Container } from './base/styles/Layout';
-import { SLink, SLogo, SParagraph } from './base/styles/Typography';
+"use client";
+import React from "react";
+import { Container } from "./base/styles/layout";
+import { SLink, SLogo, SParagraph } from "./base/styles/typography";
+import { usePathname } from "next/navigation";
+import styled, { createGlobalStyle } from "styled-components";
 
-const SHeader = styled('header', {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '20px 0px',
-  '@bpMd': {
-    flexDirection: 'column',
-    gap: '20px',
-  },
-});
-const SHeaderLinks = styled('div', {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '40px',
-});
-const SFooter = styled('footer', {
-  display: 'flex',
-  justifyContent: 'space-between',
-  padding: '20px 0px',
-  background: '$grayDarker',
-  '> div': {
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '0px 20px',
-    margin: '0 auto',
-    maxWidth: '$medium',
-    width: '100%',
-    gap: '10px',
-    '@bpMd': {
-      flexDirection: 'column',
-      gap: '20px',
-    },
-  },
-  '@bpMd': {
-    flexDirection: 'column',
-    gap: '20px',
-  },
-});
-export default function Layout({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
+const SHeader = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+`;
+
+const SHeaderLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 40px;
+`;
+
+const SFooter = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  background: var(--colors-gray-darker);
+  > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 100%;
+    gap: 10px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+`;
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    font-family: 'Open Sans', sans-serif;
+  }
+  html, body {
+    background-color: hsl(216, 65%, 9%);
+    color: hsl(226, 70%, 90%);
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  html {
+    --colors-red-medium: hsl(338, 100%, 60%);
+    --colors-red-dark: hsl(338, 100%, 44%);
+    --colors-red-darker: hsl(338, 100%, 38%);
+    --colors-gray-light: hsl(226, 70%, 90%);
+    --colors-gray-medium: hsl(225, 20%, 70%);
+    --colors-gray-darker: hsl(218, 38%, 15%);
+    --colors-gray-darkest: hsl(216, 65%, 9%);
+  }
+
+`;
+export default function HomeLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const pathname = usePathname();
   const links = [
     {
-      name: 'Home',
-      path: '/',
+      name: "Home",
+      path: "/",
     },
   ];
-
   return (
     <div>
+      <GlobalStyle />
       <Container>
         <SHeader>
           <SLogo>
@@ -62,11 +97,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </SLogo>
           <SHeaderLinks>
             {links.map((link) => (
-              <Link href={link.path} key={link.name} passHref>
-                <SLink active={router.pathname === link.path}>
-                  {link.name}
-                </SLink>
-              </Link>
+              <SLink
+                href={link.path}
+                active={pathname === link.path}
+                key={link.name}
+              >
+                {link.name}
+              </SLink>
             ))}
           </SHeaderLinks>
         </SHeader>
