@@ -1,9 +1,17 @@
 "use client";
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import { SFlex, SGrid } from "./base/styles/Layout";
-import { SParagraph, SText } from "./base/styles/Typography";
-import styled, { css } from "styled-components";
+import { Container, SFlex, SGrid } from "./base/styles/Layout";
+import { SHeadingTertiary, SParagraph, SText } from "./base/styles/Typography";
+import styled from "styled-components";
+
+const SSkillsSection = styled(Container)`
+  margin-bottom: 100px;
+`;
+
+const SSkillsHeading = styled(SHeadingTertiary)`
+  margin-bottom: 25px;
+`;
 
 const SParrot = styled.div`
   width: 100%;
@@ -79,11 +87,7 @@ interface Skill {
   image: string;
 }
 
-interface skillsProps {
-  skills: Skill[];
-}
-
-const SWrapper = styled(SGrid)`
+const SSkills = styled(SGrid)`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
@@ -112,7 +116,65 @@ const SHeader = styled(SFlex)`
   }
 `;
 
-export default function Skills({ skills }: skillsProps) {
+const skills = [
+  {
+    name: "HTML",
+    percentage: "85%",
+    image: "/technologies/html.png",
+  },
+  {
+    name: "CSS (with Flex and Grid)",
+    percentage: "85%",
+    image: "/technologies/css.png",
+  },
+  {
+    name: "Styled Components (CSS in JS)",
+    percentage: "85%",
+    image: "/technologies/styled-components.png",
+  },
+  {
+    name: "JavaScript (with ES6)",
+    percentage: "75%",
+    image: "/technologies/javascript.png",
+  },
+  {
+    name: "TypeScript",
+    percentage: "70%",
+    image: "/technologies/typescript.png",
+  },
+  {
+    name: "React (with Hooks)",
+    percentage: "85%",
+    image: "/technologies/react.png",
+  },
+  {
+    name: "Next.js",
+    percentage: "90%",
+    image: "/technologies/nextjs.png",
+  },
+  {
+    name: "Sanity.io",
+    percentage: "90%",
+    image: "/technologies/sanity.jpg",
+  },
+  {
+    name: "Node.js",
+    percentage: "60%",
+    image: "/technologies/node.png",
+  },
+  {
+    name: "React Native",
+    percentage: "50%",
+    image: "/technologies/react.png",
+  },
+  {
+    name: "Expo",
+    percentage: "40%",
+    image: "/technologies/expo.png",
+  },
+];
+
+export default function Skills() {
   const [skillsRef, skillsInView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -126,8 +188,9 @@ export default function Skills({ skills }: skillsProps) {
     return new Intl.DateTimeFormat("en-US", { year: "numeric" }).format(date);
   };
   return (
-    <div>
-      <SWrapper>
+    <SSkillsSection size="medium">
+      <SSkillsHeading>My Skills</SSkillsHeading>
+      <SSkills>
         <div>
           <SHeader>
             <div>
@@ -181,7 +244,7 @@ export default function Skills({ skills }: skillsProps) {
             time!
           </SParagraph>
         </div>
-      </SWrapper>
-    </div>
+      </SSkills>
+    </SSkillsSection>
   );
 }
