@@ -33,6 +33,9 @@ const SHero = styled.div`
   }
   > div:nth-child(2) {
     overflow: hidden;
+    img {
+      width: 100%;
+    }
   }
 `;
 
