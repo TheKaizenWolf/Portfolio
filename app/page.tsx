@@ -16,16 +16,7 @@ import Layout from "../src/components/layout";
 import Skills from "../src/components/skills";
 import { SButton } from "../src/components/base/styles/button";
 import styled, { keyframes } from "styled-components";
-
-export const typing = keyframes`
-  from { width: 0; }
-  to { width: 110%; }
-`;
-
-export const blinkCaret = keyframes`
-  from, to { border-color: transparent; }
-  50% { border-color: hsl(338, 100%, 60%) }
-`;
+import { blinkCaret, typing } from "src/components/base/styles/animations";
 
 const SHero = styled.div`
   display: grid;
