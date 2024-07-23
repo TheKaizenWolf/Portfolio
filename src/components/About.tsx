@@ -73,10 +73,10 @@ function About() {
             <SAboutHeading>About me</SAboutHeading>
             <SParagraph>
               <strong>
-                Hi there! I'm Raul, a Software Engineer based in Columbus, Ohio.
+                Hi there! I'm Raul, a Software Engineer with 5 years of
+                experience based in Columbus, Ohio.
               </strong>{" "}
-              I love creating dynamic, user-friendly web applications. I
-              specialize in frontend development with{" "}
+              I specialize in frontend development with{" "}
               <SLink target="_blank" href="https://reactjs.org/">
                 React
               </SLink>{" "}
@@ -84,31 +84,32 @@ function About() {
               <SLink target="_blank" href="https://nextjs.org/">
                 Next.js
               </SLink>
-              . I also have extensive experience working with{" "}
+              . I am also proficient with{" "}
+              <SLink target="_blank" href="https://nodejs.org/">
+                Node.js
+              </SLink>
+              , and{" "}
+              <SLink target="_blank" href="https://expressjs.com/">
+                Express
+              </SLink>
+              , Databases (SQL and NoSQL) and headless CMS integrations (such as{" "}
               <SLink target="_blank" href="https://www.sanity.io/">
                 Sanity.io
-              </SLink>{" "}
-              as a headless CMS and backend development with{" "}
-              <SLink target="_blank" href="https://nodejs.org/">
-                Node.js.
               </SLink>
+              ).
               <br />
               <br />
-              Additionally, I have expertise in CSS, enabling me to build
-              beautiful layouts that enhance user experiences. You can see
-              examples of my work on Xepelin's{" "}
+              Additionally, I am an expert at CSS, allowing me to build
+              beautiful and complex layouts.
+              <br />
+              <br />I currently work at{" "}
               <SLink target="_blank" href="https://xepelin.com">
-                Homepage
-              </SLink>{" "}
-              and{" "}
-              <SLink target="_blank" href="https://xepelin.com/mx/xsuite">
-                Xepelin XSuite
+                Xepelin
               </SLink>
-              , which I built in collaboration with the design team.
-              <br />
-              <br />
-              Currently, <strong>I’m working at Xepelin</strong>, building
-              scalable and efficient full-stack solutions.
+              , where I built and maintained the website to convert the users to
+              our app. I recently moved to the product team to expand my
+              skill-set participating in a Scrum development process, working
+              with core business logic, and doing full stack development.
             </SParagraph>
           </div>
           <div>
